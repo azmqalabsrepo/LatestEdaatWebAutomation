@@ -1,13 +1,12 @@
 package com.azmqalabs.edaattestautomation.apppages.biller.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.azmqalabs.edaattestautomation.apppages.masterpages.BasePage;
+import com.azmqalabs.edaattestautomation.common.Log;
 import com.azmqalabs.edaattestautomation.common.uielement.fieldDecorator;
 import com.azmqalabs.edaattestautomation.objectrepository.EdaatOR;
-import com.azmqalabs.edaattestautomation.common.Log;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class InvokeApplicationPage extends BasePage {
 
@@ -25,7 +24,7 @@ public class InvokeApplicationPage extends BasePage {
 			this.takeScreenShot();
 			Thread.sleep(2000);
 			WebClickUsingJS(EdaatOR.Biller_Link);
-			Log.ReportEvent("PASS", " Verify Biller Application Launched Suceessfully");
+			Log.ReportEvent("PASS", " Verify Biller Application Launched Successfully");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -40,7 +39,7 @@ public class InvokeApplicationPage extends BasePage {
 			this.takeScreenShot();
 			Thread.sleep(2000);
 			WebClickUsingJS(EdaatOR.Client_Link);
-        	Log.ReportEvent("PASS", " Verify Biller Application Launched Suceessfully");
+        	Log.ReportEvent("PASS", " Verify Biller Application Launched Successfully");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -55,7 +54,7 @@ public class InvokeApplicationPage extends BasePage {
 		try {			
 
 			WebClickUsingJS(EdaatOR.ArabicClient_Link);
-        	Log.ReportEvent("PASS", " Verify Biller Application Launched Suceessfully");
+        	Log.ReportEvent("PASS", " Verify Biller Application Launched Successfully");
 
 
 		} catch (Exception e) {

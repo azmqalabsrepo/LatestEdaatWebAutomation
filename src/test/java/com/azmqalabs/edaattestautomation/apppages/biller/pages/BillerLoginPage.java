@@ -16,16 +16,6 @@
 **/
 package com.azmqalabs.edaattestautomation.apppages.biller.pages;
 
-import java.util.Map;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.azmqalabs.edaattestautomation.apppages.GlobalConstant;
@@ -35,6 +25,13 @@ import com.azmqalabs.edaattestautomation.common.ReadData;
 import com.azmqalabs.edaattestautomation.common.uielement.fieldDecorator;
 import com.azmqalabs.edaattestautomation.objectrepository.EdaatOR;
 import com.codoid.products.fillo.Recordset;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.Map;
 
 public class BillerLoginPage extends BasePage {
 
@@ -97,7 +94,7 @@ public class BillerLoginPage extends BasePage {
 
 			}
 			test.log(Status.PASS, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
-			Log.ReportEvent("PASS", " Verify Biller Login is Suceessfull");
+			Log.ReportEvent("PASS", " Verify Biller Login is Successful");
 
 		} catch (Exception e) {
 			test.log(Status.FAIL, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
@@ -126,7 +123,7 @@ public class BillerLoginPage extends BasePage {
 
 			}
 			test.log(Status.PASS, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
-  			Log.ReportEvent("PASS", " Verify Biller Login is Suceessfull");
+  			Log.ReportEvent("PASS", " Verify Biller Login is Successful");
 
 		} catch (Exception e) {
 			test.log(Status.FAIL, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");

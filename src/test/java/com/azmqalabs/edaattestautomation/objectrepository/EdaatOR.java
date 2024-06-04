@@ -281,7 +281,7 @@ public class EdaatOR {
 	public final static String Biller_Subbiller_NId="//input[@id='NationalId']";
 	public final static String Biller_Individualclient_Name = "//input[@id='Name']";
 	public final static String Biller_Individualclient_CustomerRefNumber = "//input[@id='CustomerRefNumber']";
-	public final static String Biller_Individualclient_DateOfBirth = "//input[@id='DateOfBirth']";
+	public final static String Biller_Individualclient_DateOfBirth = "//input[@id='DateOfBirthHijri']";
 	public final static String Biller_Invoice_Templatetype_Rec= "//input[@id='BillType_16']";
 	public final static String Biller_Invoice_Templatetype_Chkboxes= "//div[@class='form-group mb-4']/div//input[@type='checkbox']";
 	public final static String Biller_Individualclient_refno = "//input[@name='CustomerRefNumber']";
@@ -2311,7 +2311,7 @@ public static String Biller_MyAccount_pushNotificationtoggelbtn="//label[@for='1
 	  //public static final String Client_ClientAccountStatement_Reportclientname = "//div[text()='client test']";
 	  //public static final String Client_ClientAccountStatement_Reportclientname = "//div[text()='عميل فرد']";
 	  //public static final String Client_ClientAccountStatement_Reportclientname = "//div[text()='test2023']";
-	   public static final String Client_ClientAccountStatement_Reportclientname = "//div[text()='clientOne EdaatTest']";
+	   public static final String Client_ClientAccountStatement_Reportclientname = "//div[text()='clientOne EdaatTestOne']";
 	   public static final String Client_reportFrame = "//iframe[@src='/ReportViewerWebForm.aspx']";
 	   
 

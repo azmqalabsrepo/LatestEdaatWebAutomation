@@ -12,10 +12,12 @@
 **/
 package com.azmqalabs.edaattestautomation.apppages.biller.pages;
 
-import java.util.List;
-import java.util.Map;
-
-import org.openqa.selenium.Alert;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.azmqalabs.edaattestautomation.apppages.masterpages.BasePage;
+import com.azmqalabs.edaattestautomation.common.Log;
+import com.azmqalabs.edaattestautomation.common.uielement.fieldDecorator;
+import com.azmqalabs.edaattestautomation.objectrepository.EdaatOR;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -23,13 +25,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.azmqalabs.edaattestautomation.apppages.GlobalConstant;
-import com.azmqalabs.edaattestautomation.apppages.masterpages.BasePage;
-import com.azmqalabs.edaattestautomation.common.uielement.fieldDecorator;
-import com.azmqalabs.edaattestautomation.objectrepository.EdaatOR;
-import com.azmqalabs.edaattestautomation.common.Log;
+import java.util.List;
+import java.util.Map;
 
 
 
@@ -62,7 +59,7 @@ public class BillerIndividualClientPage extends BasePage
 	        	if(Ele==true)
 {
 	        		test.log(Status.PASS,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client PASS * " );
-	        	Log.ReportEvent("PASS", " Verify Add Individual Client is Suceessful");
+	        	    Log.ReportEvent("PASS", " Verify Add Individual Client is Successful");
 }
         	else
     	    	test.log(Status.FAIL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
