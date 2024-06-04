@@ -125,12 +125,12 @@ public class BillerImportClientdataPage extends BasePage
                 Thread.sleep(3000);
                 this.takeScreenShot();    
 
-                test.log(Status.PASS,"#FUNC-Search ImportClientdata is successful" + driver.getTitle() +" * Clients PASS * " );    
+                test.log(Status.PASS,"Search ImportClientdata is successful" + driver.getTitle() +" * Clients PASS * " );
                	Log.ReportEvent("PASS", " Verify To download import client data is Suceessfull");
 
             }
             catch(Exception e){
-                test.log(Status.FATAL,"#FUNC-Search ImportClientdata is Failed" + driver.getTitle() +" * Clients FAIL * " );
+                test.log(Status.FATAL,"Search ImportClientdata is Failed" + driver.getTitle() +" * Clients FAIL * " );
                 this.takeScreenShot();
             }        
                  }
@@ -171,11 +171,11 @@ public class BillerImportClientdataPage extends BasePage
 			VerifyValue1(getText(EdaatOR.Biller_Individual_type_verify),testdatamap.get("TypeIndividual").toString());
 			Thread.sleep(1000);
 			this.takeScreenShot();
-			test.log(Status.PASS,"#FUNC- Verify to select the type of the customer" + driver.getTitle() +" * select the type of the customer PASS * " );
+			test.log(Status.PASS," Verify to select the type of the customer" + driver.getTitle() +" * select the type of the customer PASS * " );
         	Log.ReportEvent("PASS", " Verify to select the type of the customer is Suceessful");
 			}
 		catch(Exception e){
-			test.log(Status.FATAL,"#FUNC- Verify to select the type of the customer" + driver.getTitle() +" * select the type of the customer FAIL * " );
+			test.log(Status.FATAL," Verify to select the type of the customer" + driver.getTitle() +" * select the type of the customer FAIL * " );
 			this.takeScreenShot();
 			}
 		}
@@ -192,11 +192,11 @@ public class BillerImportClientdataPage extends BasePage
 		        Thread.sleep(3000);
 		    	this.takeScreenShot();	
 		    	
-				test.log(Status.PASS,"#FUNC-Search ImportClientdata is successful" + driver.getTitle() +" * Clients PASS * " );	
+				test.log(Status.PASS,"Search ImportClientdata is successful" + driver.getTitle() +" * Clients PASS * " );
 				Log.ReportEvent("PASS", " Verify to Import Clients Bulk Data is Suceessful");
 			}
 			catch(Exception e){
-				test.log(Status.FATAL,"#FUNC-Search ImportClientdata is Failed" + driver.getTitle() +" * Clients FAIL * " );
+				test.log(Status.FATAL,"Search ImportClientdata is Failed" + driver.getTitle() +" * Clients FAIL * " );
 				this.takeScreenShot();
 			}    	
 	    }	
@@ -296,11 +296,11 @@ public class BillerImportClientdataPage extends BasePage
 
 		        if (ExistsCheck(EdaatOR.BillerImportClientdataError)) {
 				VerifyValue(Expected,EdaatOR.BillerImportClientdataError);
-				test.log(Status.PASS, "#FUNC-Attachfile ErrorMessage Exists" + driver.getTitle() + " * Attachfile ErrorMessage Exists * ");
+				test.log(Status.PASS, "Attachfile ErrorMessage Exists" + driver.getTitle() + " * Attachfile ErrorMessage Exists * ");
 		                }
 		        else {
 
-					test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+					test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 		        }
 		       }
 			else if (ClientType.equalsIgnoreCase("Corporate") ) {
@@ -310,13 +310,13 @@ public class BillerImportClientdataPage extends BasePage
 				WebClickUsingJS(EdaatOR.Biller_ClientProcessButton);
 				if(ExistsCheck(EdaatOR.BillerImportClientdataError)) {
 				VerifyValue(Expected,EdaatOR.BillerImportClientdataError);
-				test.log(Status.PASS, "#FUNC-Attachfile ErrorMessage Exists" + driver.getTitle() + " *Attachfile ErrorMessage Exists * ");
+				test.log(Status.PASS, "Attachfile ErrorMessage Exists" + driver.getTitle() + " *Attachfile ErrorMessage Exists * ");
 				this.takeScreenShot();
 
 				}
 				else {
 
-					test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+					test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 		        }
 			}
 			
@@ -338,12 +338,12 @@ public class BillerImportClientdataPage extends BasePage
 				if(ExistsCheck(EdaatOR.BillerImportClientdataError))
 				{
 					VerifyValue(Expected,EdaatOR.BillerImportClientdataError);
-					test.log(Status.PASS, "#FUNC-Wrong upload ErrorMessage Exists" + driver.getTitle() + " *Wrong upload ErrorMessage Exists * ");
+					test.log(Status.PASS, "Wrong upload ErrorMessage Exists" + driver.getTitle() + " *Wrong upload ErrorMessage Exists * ");
 					this.takeScreenShot();
 				}
 				else
 				{
-					test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+					test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 
 				}
 			}
@@ -363,12 +363,12 @@ public class BillerImportClientdataPage extends BasePage
 		        if(ExistsCheck(EdaatOR.BillerImportClientdataError))
 				{
 					VerifyValue(Expected,EdaatOR.BillerImportClientdataError);
-					test.log(Status.PASS, "#FUNC-Wrong upload ErrorMessage Exists" + driver.getTitle() + " *Wrong upload ErrorMessage Exists * ");
+					test.log(Status.PASS, "Wrong upload ErrorMessage Exists" + driver.getTitle() + " *Wrong upload ErrorMessage Exists * ");
 					this.takeScreenShot();
 				}
 				else
 				{
-					test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+					test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 
 				}
 		

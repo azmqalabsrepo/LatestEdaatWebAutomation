@@ -61,11 +61,11 @@ public class BillerAPIdocumentPage extends BasePage
 		        Thread.sleep(1000);
 		        WebClick(EdaatOR.Biller_ApiDocDownload);
 	        	this.takeScreenShot();
-				test.log(Status.PASS,"#FUNC-Export API document is successful " + driver.getTitle() +" * Export API document PASS * " );	
+				test.log(Status.PASS,"-Export API document is successful " + driver.getTitle() +" * Export API document PASS * " );
 			  	Log.ReportEvent("PASS", "Verify Add Corporate Client is Suceessful");
 			}
 			catch(Exception e){
-				test.log(Status.FATAL,"#FUNC-Export API document is Failed " + driver.getTitle() +" * Export API document FAIL * " );
+				test.log(Status.FATAL,"-Export API document is Failed " + driver.getTitle() +" * Export API document FAIL * " );
 				this.takeScreenShot();
 			}
 

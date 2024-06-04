@@ -58,11 +58,11 @@ public class BillerLoginPage extends BasePage {
 			Header = ExistsCheck(Main);
 			
 		//	if (Header) {
-				test.log(Status.PASS, "#FUNC-Element Exists" + driver.getTitle() + " * Element Exists * ");
+				test.log(Status.PASS, "Element Exists" + driver.getTitle() + " * Element Exists * ");
 	        	Log.ReportEvent("PASS", " Verify Main Page is Dislayed");	        	
 
 		//	} else {
-		//		test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+		//		test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 		//	}
 		} catch (Exception e) {
 			test.log(Status.FATAL,
@@ -93,11 +93,11 @@ public class BillerLoginPage extends BasePage {
 				WebClick(EdaatOR.LoginPage_LogIn);
 
 			}
-			test.log(Status.PASS, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
+			test.log(Status.PASS, "LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
 			Log.ReportEvent("PASS", " Verify Biller Login is Successful");
 
 		} catch (Exception e) {
-			test.log(Status.FAIL, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
+			test.log(Status.FAIL, "LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
 			this.takeScreenShot();
 		}
 	}
@@ -122,11 +122,11 @@ public class BillerLoginPage extends BasePage {
 				WebClick(EdaatOR.LoginPage_LogIn);
 
 			}
-			test.log(Status.PASS, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
+			test.log(Status.PASS, "LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
   			Log.ReportEvent("PASS", " Verify Biller Login is Successful");
 
 		} catch (Exception e) {
-			test.log(Status.FAIL, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
+			test.log(Status.FAIL, "LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
 			this.takeScreenShot();
 		}
 	}
@@ -148,11 +148,11 @@ public class BillerLoginPage extends BasePage {
 				WebClick(EdaatOR.LoginPage_LogIn);
 
 			}
-			test.log(Status.PASS, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
+			test.log(Status.PASS, "LoginToApplication" + driver.getTitle() + " * Login To Application PASS * ");
         	Log.ReportEvent("PASS", " Verify Biller Login is Suceessfull");
 
 		} catch (Exception e) {
-			test.log(Status.FAIL, "#FUNC-LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
+			test.log(Status.FAIL, "LoginToApplication" + driver.getTitle() + " * Login To Application FAILED * ");
 			this.takeScreenShot();
 		}
 	}
@@ -189,14 +189,14 @@ public class BillerLoginPage extends BasePage {
 	public void Logout(String logout,Log Log) {
 		try {
 			WebClickUsingJS(logout);
-			test.log(Status.PASS, "#FUNC-Logout Successful" + driver.getTitle() + " * Logout * ");
+			test.log(Status.PASS, "Logout Successful" + driver.getTitle() + " * Logout * ");
         	Log.ReportEvent("PASS", " Logout  Suceessful");
 
 			this.takeScreenShot();
 			
 		} catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Logout Not Successful" + driver.getTitle() + " * Not Logout * ");
+			test.log(Status.FAIL, "Logout Not Successful" + driver.getTitle() + " * Not Logout * ");
 			throw new NoSuchElementException("Logout - Logout Failed");
 
 		}
@@ -208,12 +208,12 @@ public class BillerLoginPage extends BasePage {
 			WebClickUsingJS(forGet);
 			WebEdit(EdaatOR.LoginPage_Username, Username);
 			WebClickUsingJS(EdaatOR.LoginPage_send);
-			test.log(Status.PASS, "#FUNC-ForgetPassword functionality Successful" + driver.getTitle() + " * Forget Password * ");
+			test.log(Status.PASS, "ForgetPassword functionality Successful" + driver.getTitle() + " * Forget Password * ");
 			Log.ReportEvent("PASS"," Verify Biller Forgetpassword Functionality");
 			this.takeScreenShot();
 		} catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-ForgetPassword functionality Not Successful" + driver.getTitle() + " * Forget Password * ");
+			test.log(Status.FAIL, "ForgetPassword functionality Not Successful" + driver.getTitle() + " * Forget Password * ");
 			throw new NoSuchElementException("ForgetPassword - ForgetPassword Failed");
 
 		}
@@ -244,13 +244,13 @@ public class BillerLoginPage extends BasePage {
 				waitForPageToLoad();
 				switchTonextwindow();
 				verifyElementIsPresent(EdaatOR.HomePage);
-				test.log(Status.PASS, "#FUNC-Verify Edaat Logo is Successful" + driver.getTitle() + " * Edaat Logo * ");
+				test.log(Status.PASS, "Verify Edaat Logo is Successful" + driver.getTitle() + " * Edaat Logo * ");
 				Log.ReportEvent("PASS", " Verify to click on EDAAT logo and navigate to home page");
 				this.takeScreenShot();
 			}
 	catch(Exception e) {
 		this.takeScreenShot();
-		test.log(Status.FAIL, "#FUNC-Verify Edaat Logo is Not Successful" + driver.getTitle() + " * Edaat Logo * ");
+		test.log(Status.FAIL, "Verify Edaat Logo is Not Successful" + driver.getTitle() + " * Edaat Logo * ");
 
 	}		
 		}	
@@ -269,7 +269,7 @@ public class BillerLoginPage extends BasePage {
 		}
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 			
 		}
 	}
@@ -317,13 +317,13 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_About_Edaat);
 	          switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_About_verify);
-			  test.log(Status.PASS, "#FUNC-AboutEdaat" + driver.getTitle() + " * AboutEdaat link opened successfully* ");
+			  test.log(Status.PASS, "AboutEdaat" + driver.getTitle() + " * AboutEdaat link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 	}
 	//Function Summary   : Method to verify Ourservices link in the footer page.
@@ -335,13 +335,13 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_OurService);
 	          switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_OurService_verif);
-			  test.log(Status.PASS, "#FUNC-Ourservices" + driver.getTitle() + " * Ourservices link opened successfully* ");
+			  test.log(Status.PASS, "Ourservices" + driver.getTitle() + " * Ourservices link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 	}
 	
@@ -353,13 +353,13 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_fintech);
 	         /* switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_OurClient_verif); */
-			  test.log(Status.PASS, "#FUNC-Fintech" + driver.getTitle() + " * Fintech link opened successfully* ");
+			  test.log(Status.PASS, "Fintech" + driver.getTitle() + " * Fintech link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 	}
 	//Function Summary   : Method to verify OursClients link in the footer page.
@@ -370,13 +370,13 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_OurClient);
 	          switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_OurClient_verif);
-			  test.log(Status.PASS, "#FUNC-Fintech" + driver.getTitle() + " * Fintech link opened successfully* ");
+			  test.log(Status.PASS, "Fintech" + driver.getTitle() + " * Fintech link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 	}
 	
@@ -390,13 +390,13 @@ public class BillerLoginPage extends BasePage {
 	          verifyElementIsPresent(EdaatOR.Biller_Enquiry_verif);
 	          WebClickUsingJS(EdaatOR.Biller_Clientreg_cancel);
 	          WebClickUsingJS(EdaatOR.Biller_Clientreg_yescancel);
-			  test.log(Status.PASS, "#FUNC-BillerEnquiry" + driver.getTitle() + " * BillerEnquiry link opened successfully* ");
+			  test.log(Status.PASS, "BillerEnquiry" + driver.getTitle() + " * BillerEnquiry link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 		
 	}
@@ -408,14 +408,14 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_Clientreg);
 	          switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_Clientreg_verif);
-			  test.log(Status.PASS, "#FUNC-ClientRegister" + driver.getTitle() + " * ClientRegister link opened successfully* ");
+			  test.log(Status.PASS, "ClientRegister" + driver.getTitle() + " * ClientRegister link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 		
 
@@ -428,14 +428,14 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_registerlnk);
 	          switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_registerlnk_verif);
-			  test.log(Status.PASS, "#FUNC-BillerRegister" + driver.getTitle() + " * BillerRegister link opened successfully* ");
+			  test.log(Status.PASS, "BillerRegister" + driver.getTitle() + " * BillerRegister link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 	}
 	
@@ -447,13 +447,13 @@ public class BillerLoginPage extends BasePage {
 	          WebClickUsingJS(EdaatOR.Biller_registerlnk);
 	          switchToWindow();
 	          verifyElementIsPresent(EdaatOR.Biller_registerlnk_verif);
-			  test.log(Status.PASS, "#FUNC-BillerRegister" + driver.getTitle() + " * BillerRegister link opened successfully* ");
+			  test.log(Status.PASS, "BillerRegister" + driver.getTitle() + " * BillerRegister link opened successfully* ");
 		      this.takeScreenShot();
 			  driver.navigate().back();
 		    }
 		catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 		}
 	   
    }
@@ -465,14 +465,14 @@ public class BillerLoginPage extends BasePage {
 		   WebClickUsingJS(EdaatOR.Biller_FAQ_link);
 		   switchToWindow();
 		   verifyElementIsPresent(EdaatOR.Biller_FAQ_Verify);
-		   test.log(Status.PASS, "#FUNC-FAQ" + driver.getTitle() + " * FAQ link opened successfully* ");
+		   test.log(Status.PASS, "FAQ" + driver.getTitle() + " * FAQ link opened successfully* ");
 		   this.takeScreenShot();
 		   driver.navigate().back();
 	   }
 	   catch(Exception e)
 	   {
 		   this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 	   }
 	   
 	   
@@ -485,14 +485,14 @@ public class BillerLoginPage extends BasePage {
     	   WebClickUsingJS(EdaatOR.Biller_Tearms_link);
     	   switchToWindow();
     	   verifyElementIsPresent(EdaatOR.Biller_Tearms_Verify);
-    	   test.log(Status.PASS, "#FUNC-BillerRegister" + driver.getTitle() + " * BillerRegister link opened successfully* ");
+    	   test.log(Status.PASS, "BillerRegister" + driver.getTitle() + " * BillerRegister link opened successfully* ");
 	       this.takeScreenShot();
 			  driver.navigate().back();
 	   }
 	   catch(Exception e)
 	   {
 		   this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * ");
+			test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 	   }
 	    
    }
@@ -504,14 +504,14 @@ public class BillerLoginPage extends BasePage {
     	   WebClickUsingJS(EdaatOR.Biller_Priavcy_link);
     	   switchToWindow();
     	   verifyElementIsPresent(EdaatOR.Biller_Priavcy_verify);
-    	   test.log(Status.PASS, "#FUNC-Privacy" + driver.getTitle() + " * Privacy policy link opened successfully* ");
+    	   test.log(Status.PASS, "Privacy" + driver.getTitle() + " * Privacy policy link opened successfully* ");
 	       this.takeScreenShot();
 			  driver.navigate().back();
 	   }
 	   catch(Exception e)
 	   {
 		this.takeScreenShot();
-		test.log(Status.FAIL, "#FUNC-Element not Exists" + driver.getTitle() + " * Element not Exists * "); 
+		test.log(Status.FAIL, "Element not Exists" + driver.getTitle() + " * Element not Exists * ");
 	   }
 	   
    }	
@@ -525,12 +525,12 @@ public class BillerLoginPage extends BasePage {
            WebClick(EdaatOR.Biller_InvalidloginButton);
            Thread.sleep(1000);
            LoginErrormeaasgaeValidation(testdatamap);
-           test.log(Status.PASS, "#FUNC-Invalid Error message" + driver.getTitle() + " * Invalid login error message Success* "); 
+           test.log(Status.PASS, "Invalid Error message" + driver.getTitle() + " * Invalid login error message Success* ");
 	   }
 	   catch(Exception e)
 	   {
 		   this.takeScreenShot();
-		test.log(Status.FATAL, "#FUNC-Invalid Error message" + driver.getTitle() + " * Invalid login error message is Fail* "); 	   
+		test.log(Status.FATAL, "Invalid Error message" + driver.getTitle() + " * Invalid login error message is Fail* ");
  }
    }
 
@@ -540,21 +540,21 @@ public class BillerLoginPage extends BasePage {
 		try {
 			if (ExistsCheck(EdaatOR.Biller_InvalidloginUserError)&&(ExistsCheck(EdaatOR.Biller_InvalidloginPasswordError))) {
 				VerifyValue(Expected,EdaatOR.Biller_InvalidloginUserError);
-				test.log(Status.PASS, "#FUNC-LoginUserName ErrorMessage Exists" + driver.getTitle() + " * LoginUserNameAndpassword ErrorMessage Exists * ");
+				test.log(Status.PASS, "LoginUserName ErrorMessage Exists" + driver.getTitle() + " * LoginUserNameAndpassword ErrorMessage Exists * ");
 			}
 			else if	(ExistsCheck(EdaatOR.Biller_InvalidloginPasswordError)) {
 				VerifyValue(Expected,EdaatOR.Biller_InvalidloginPasswordError);
-				test.log(Status.PASS, "#FUNC-LoginUserName ErrorMessage Exists" + driver.getTitle() + " * LoginPassword ErrorMessage Exists * ");	
+				test.log(Status.PASS, "LoginUserName ErrorMessage Exists" + driver.getTitle() + " * LoginPassword ErrorMessage Exists * ");
    }
 			else if	(ExistsCheck(EdaatOR.Biller_InvalidloginUserErrors)) {
 				VerifyValue(Expected,EdaatOR.Biller_InvalidloginUserErrors);
-				test.log(Status.PASS, "#FUNC-LoginUserName ErrorMessage Exists" + driver.getTitle() + " * LoginPassword ErrorMessage Exists * ");	
+				test.log(Status.PASS, "LoginUserName ErrorMessage Exists" + driver.getTitle() + " * LoginPassword ErrorMessage Exists * ");
    }
 		}
 		   catch(Exception e)
 		   {
 			   this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-Invalid Error message" + driver.getTitle() + " * Invalid login error message is Fail* "); 	   
+			test.log(Status.FAIL, "Invalid Error message" + driver.getTitle() + " * Invalid login error message is Fail* ");
 	 }
 
 }
@@ -566,11 +566,11 @@ public class BillerLoginPage extends BasePage {
 			//WebClick(EdaatOR.Biller_forgetlinksendbtn);			
 			WebClickUsingJS(EdaatOR.LoginPage_send);
 			VerifyValue(Username,EdaatOR.Biller_Usernamevalidation);
-			test.log(Status.PASS, "#FUNC-ForgetPassword functionality Successful" + driver.getTitle() + " * Forget Password * ");
+			test.log(Status.PASS, "ForgetPassword functionality Successful" + driver.getTitle() + " * Forget Password * ");
 			this.takeScreenShot();
 		} catch (Exception e) {
 			this.takeScreenShot();
-			test.log(Status.FAIL, "#FUNC-ForgetPassword functionality Not Successful" + driver.getTitle() + " * Forget Password * ");
+			test.log(Status.FAIL, "ForgetPassword functionality Not Successful" + driver.getTitle() + " * Forget Password * ");
 			throw new NoSuchElementException("ForgetPassword - ForgetPassword Failed");
 
 		}

@@ -523,7 +523,7 @@ public class BillerSignUpPage extends BasePage
 				Thread.sleep(2000);
 				verifyElementIsPresent(EdaatOR.Biller_RegisterComp_btn);
 	//verifyElementIsPresent(EdaatOR.Biller_RegisterComp_btn);
-				test.log(Status.PASS,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
+				test.log(Status.PASS,"Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
 				takeScreenShot();
 	        	Log.ReportEvent("PASS", " Verify User Able to Register or Sign Up Successfully");
 
@@ -545,16 +545,16 @@ public class BillerSignUpPage extends BasePage
 				String ActuvalValue = getText(EdaatOR.Biller_confirmpassoword);
 				VerifyValue1(ActuvalValue,testdatamap.get("ConfirmPasswordmsg").toString() );
 			//	verifyElementIsPresent(EdaatOR.Biller_RegisterComp_btn);
-				test.log(Status.PASS,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
+				test.log(Status.PASS,"Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
 				takeScreenShot();
 			}
 			else {
-				test.log(Status.FAIL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+				test.log(Status.FAIL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
 			}
 			this.takeScreenShot();
 		}
 		catch(Exception e){
-			test.log(Status.FATAL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+			test.log(Status.FATAL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
 		}
 	}
 
@@ -575,11 +575,11 @@ public class BillerSignUpPage extends BasePage
 				ClickOnBillerCatchBox();
 				ClickOnRegisterBtn();	
 				verifyElementIsNotPresent(EdaatOR.Biller_RegisterComp_btn);;
-				test.log(Status.PASS,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
+				test.log(Status.PASS,"Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
 			}
 		}
 		catch(Exception e){
-			test.log(Status.FATAL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+			test.log(Status.FATAL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
 			this.takeScreenShot();
 		}
 	}
@@ -605,7 +605,7 @@ public class BillerSignUpPage extends BasePage
 				Thread.sleep(2000);
 			//	verifyElementIsPresent(EdaatOR.Biller_RegisterComp_btn);
 	//verifyElementIsPresent(EdaatOR.Biller_RegisterComp_btn);
-				test.log(Status.PASS,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
+				test.log(Status.PASS,"Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
 				takeScreenShot();
 			}
 			else if(testdatamap.get("SignUpDate").toString().equalsIgnoreCase("Invalid")) {
@@ -624,16 +624,16 @@ public class BillerSignUpPage extends BasePage
 				Thread.sleep(2000);
 				String ActuvalValue = getText(EdaatOR.Biller_confirmpassoword);
 				VerifyValue1(ActuvalValue,testdatamap.get("ConfirmPasswordmsg").toString() );
-				test.log(Status.PASS,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
+				test.log(Status.PASS,"Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
 				takeScreenShot();
 			}
 			else {
-				test.log(Status.FAIL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+				test.log(Status.FAIL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
 			}
 			this.takeScreenShot();
 		}
 		catch(Exception e){
-			test.log(Status.FATAL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+			test.log(Status.FATAL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
 		}
 	}
 
@@ -650,12 +650,12 @@ public class BillerSignUpPage extends BasePage
 				VerifyValue(Expected,EdaatOR.RegistrationPage_CityError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_DistrictNameError);				
 
-				test.log(Status.PASS, "#FUNC-CorporateName,City and District  ErrorMessage Exists" + driver.getTitle() + " * CorporateName,City and District ErrorMessage Exists * ");
+				test.log(Status.PASS, "CorporateName,City and District  ErrorMessage Exists" + driver.getTitle() + " * CorporateName,City and District ErrorMessage Exists * ");
 			}
 			
 			else if (ExistsCheck(EdaatOR.RegistrationPage_StreetError) && ExistsCheck(EdaatOR.RegistrationPage_BuildingNoError) && ExistsCheck(EdaatOR.RegistrationPage_ZipCodeError) && ExistsCheck(EdaatOR.RegistrationPage_AdditionalNumberError) && ExistsCheck(EdaatOR.RegistrationPage_UnitNumberError)){	
 				VerifyValue(Expected,EdaatOR.RegistrationPage_StreetError);				
-				test.log(Status.PASS, "#FUNC-Street,BuildingNo,ZipCode,AdditionalNumber and UnitNumber  ErrorMessage Exists" + driver.getTitle() + " *Street,BuildingNo,ZipCode,AdditionalNumber and UnitNumber  ErrorMessage Exists * ");
+				test.log(Status.PASS, "Street,BuildingNo,ZipCode,AdditionalNumber and UnitNumber  ErrorMessage Exists" + driver.getTitle() + " *Street,BuildingNo,ZipCode,AdditionalNumber and UnitNumber  ErrorMessage Exists * ");
 			}
 	
 			
@@ -665,14 +665,14 @@ public class BillerSignUpPage extends BasePage
 				VerifyValue(Expected,EdaatOR.RegistrationPage_EmployeeEmailError);	
 				VerifyValue(Expected,EdaatOR.RegistrationPage_ClientSupportPhoneNumberError);				
 				VerifyValue(Expected,EdaatOR.RegistrationPage_EmployeePositionError);				
-				test.log(Status.PASS, "#FUNC-EmployeeName,EmployeePosition,EmployeeMobileNumber,EmployeeEmail and ClientSupportPhoneNumber ErrorMessage Exists" + driver.getTitle() + " *EmployeeName,EmployeePosition,EmployeeMobileNumber,EmployeeEmail and ClientSupportPhoneNumber ErrorMessage Exists * ");
+				test.log(Status.PASS, "EmployeeName,EmployeePosition,EmployeeMobileNumber,EmployeeEmail and ClientSupportPhoneNumber ErrorMessage Exists" + driver.getTitle() + " *EmployeeName,EmployeePosition,EmployeeMobileNumber,EmployeeEmail and ClientSupportPhoneNumber ErrorMessage Exists * ");
 			}
 		
 			else if (ExistsCheck(EdaatOR.RegistrationPage_IBANNumberError)&& ExistsCheck(EdaatOR.RegistrationPage_BankAccountTypeError)){	
 				VerifyValue(Expected,EdaatOR.RegistrationPage_IBANNumberError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_BankAccountTypeError);				
 
-				test.log(Status.PASS, "#FUNC-IBANNumber and BankAccountType ErrorMessage Exists" + driver.getTitle() + " *IBANNumber and BankAccountType ErrorMessage Exists * ");
+				test.log(Status.PASS, "IBANNumber and BankAccountType ErrorMessage Exists" + driver.getTitle() + " *IBANNumber and BankAccountType ErrorMessage Exists * ");
 			}
 			
 			else if (ExistsCheck(EdaatOR.RegistrationPage_CRNumberError) && ExistsCheck(EdaatOR.RegistrationPage_TaxNumberError) ){	
@@ -680,7 +680,7 @@ public class BillerSignUpPage extends BasePage
 				VerifyValue(Expected,EdaatOR.RegistrationPage_TaxNumberError);				
 		
 
-				test.log(Status.PASS, "#FUNC-CRNumber and TaxNumber ErrorMessage Exists" + driver.getTitle() + " *CRNumber and TaxNumber ErrorMessage Exists * ");
+				test.log(Status.PASS, "CRNumber and TaxNumber ErrorMessage Exists" + driver.getTitle() + " *CRNumber and TaxNumber ErrorMessage Exists * ");
 			}
 						
 			else if (ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonFirstNameError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonSecondNameError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonThirdNameError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonLastNameError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonIDError)  ){	
@@ -690,7 +690,7 @@ public class BillerSignUpPage extends BasePage
 				VerifyValue(Expected,EdaatOR.RegistrationPage_AuthorizedPersonLastNameError);				
 				VerifyValue(Expected,EdaatOR.RegistrationPage_AuthorizedPersonIDError);				
 
-				test.log(Status.PASS, "#FUNC-AuthorizedPersonName and AuthorizedPersonID ErrorMessage Exists" + driver.getTitle() + " *AuthorizedPersonName and AuthorizedPersonID ErrorMessage Exists * ");
+				test.log(Status.PASS, "AuthorizedPersonName and AuthorizedPersonID ErrorMessage Exists" + driver.getTitle() + " *AuthorizedPersonName and AuthorizedPersonID ErrorMessage Exists * ");
 			}
 							
 			else if (ExistsCheck(EdaatOR.RegistrationPage_MobileNoError) && ExistsCheck(EdaatOR.RegistrationPage_EmailError) && ExistsCheck(EdaatOR.RegistrationPage_UserNameError) && ExistsCheck(EdaatOR.RegistrationPage_PasswordError) && ExistsCheck(EdaatOR.RegistrationPage_ConfirmPasswordError)  ){	
@@ -700,79 +700,79 @@ public class BillerSignUpPage extends BasePage
 				VerifyValue(Expected,EdaatOR.RegistrationPage_PasswordError);				
 				VerifyValue(Expected,EdaatOR.RegistrationPage_ConfirmPasswordError);				
 
-				test.log(Status.PASS, "#FUNC-MobileNo,Email,UserName,Password and ConfirmPassword ErrorMessage Exists" + driver.getTitle() + " *MobileNo,Email,UserName,Password and ConfirmPassword ErrorMessage Exists * ");
+				test.log(Status.PASS, "MobileNo,Email,UserName,Password and ConfirmPassword ErrorMessage Exists" + driver.getTitle() + " *MobileNo,Email,UserName,Password and ConfirmPassword ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_CorporateNameInvalidError)&& ExistsCheck(EdaatOR.RegistrationPage_DistrictNameInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_CorporateNameInvalidError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_DistrictNameInvalidError);
-				test.log(Status.PASS, "#FUNC-CorporateName and District invalid data ErrorMessage Exists" + driver.getTitle() + " *CorporateName and District invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "CorporateName and District invalid data ErrorMessage Exists" + driver.getTitle() + " *CorporateName and District invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_StreetInvaidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_StreetInvaidError);
-				test.log(Status.PASS, "#FUNC-Street invalid data ErrorMessage Exists" + driver.getTitle() + " *Street invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "Street invalid data ErrorMessage Exists" + driver.getTitle() + " *Street invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_EmployeeNameInvaidError) && ExistsCheck(EdaatOR.RegistrationPage_EmployeePositionInvaidError)) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_StreetInvaidError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_EmployeePositionInvaidError);
-				test.log(Status.PASS, "#FUNC-EmployeeName and EmployeePosition invalid data ErrorMessage Exists" + driver.getTitle() + " *EmployeeName and EmployeePosition invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "EmployeeName and EmployeePosition invalid data ErrorMessage Exists" + driver.getTitle() + " *EmployeeName and EmployeePosition invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_EmployeeMobileNumberInvaidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_EmployeeMobileNumberInvaidError);
-				test.log(Status.PASS, "#FUNC-EmployeeMobileNumber invalid data ErrorMessage Exists" + driver.getTitle() + " *EmployeeMobileNumber invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "EmployeeMobileNumber invalid data ErrorMessage Exists" + driver.getTitle() + " *EmployeeMobileNumber invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_EmployeeEmailInvaidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_EmployeeEmailInvaidError);
-				test.log(Status.PASS, "#FUNC-EmployeeEmail invalid data ErrorMessage Exists" + driver.getTitle() + " *EmployeeEmail invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "EmployeeEmail invalid data ErrorMessage Exists" + driver.getTitle() + " *EmployeeEmail invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_ClientSupportPhoneNumberInvalidError) ) {
 					VerifyValue(Expected,EdaatOR.RegistrationPage_ClientSupportPhoneNumberInvalidError);
-					test.log(Status.PASS, "#FUNC-ClientSupportPhoneNumber invalid data ErrorMessage Exists" + driver.getTitle() + " *ClientSupportPhoneNumber invalid data ErrorMessage Exists * ");
+					test.log(Status.PASS, "ClientSupportPhoneNumber invalid data ErrorMessage Exists" + driver.getTitle() + " *ClientSupportPhoneNumber invalid data ErrorMessage Exists * ");
 				}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_IBANNumberInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_IBANNumberInvalidError);
-				test.log(Status.PASS, "#FUNC-IBANNumber invalid data ErrorMessage Exists" + driver.getTitle() + " *IBANNumber invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "IBANNumber invalid data ErrorMessage Exists" + driver.getTitle() + " *IBANNumber invalid data ErrorMessage Exists * ");
 			}	
 			else if(ExistsCheck(EdaatOR.RegistrationPage_CRNumberInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_CRNumberInvalidError);
-				test.log(Status.PASS, "#FUNC-CRNumber  invalid data ErrorMessage Exists" + driver.getTitle() + " *CRNumber invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "CRNumber  invalid data ErrorMessage Exists" + driver.getTitle() + " *CRNumber invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_TaxNumberInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_TaxNumberInvalidError);
-				test.log(Status.PASS, "#FUNC-TaxNumber  invalid data ErrorMessage Exists" + driver.getTitle() + " *TaxNumber invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "TaxNumber  invalid data ErrorMessage Exists" + driver.getTitle() + " *TaxNumber invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonFirstNameInvalidError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonSecondNameInvalidError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonThirdNameInvalidError) && ExistsCheck(EdaatOR.RegistrationPage_AuthorizedPersonLastNameInvalidError)) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_AuthorizedPersonFirstNameInvalidError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_AuthorizedPersonSecondNameInvalidError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_AuthorizedPersonThirdNameInvalidError);
 				VerifyValue(Expected,EdaatOR.RegistrationPage_AuthorizedPersonLastNameInvalidError);
-				test.log(Status.PASS, "#FUNC-AuthorizedPersonName  invalid data ErrorMessage Exists" + driver.getTitle() + " *AuthorizedPersonName invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "AuthorizedPersonName  invalid data ErrorMessage Exists" + driver.getTitle() + " *AuthorizedPersonName invalid data ErrorMessage Exists * ");
 			}
 			else if(ExistsCheck(EdaatOR.RegistrationPage_MobileNoInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_MobileNoInvalidError);
-				test.log(Status.PASS, "#FUNC-MobileNo  invalid data ErrorMessage Exists" + driver.getTitle() + " *MobileNo invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "MobileNo  invalid data ErrorMessage Exists" + driver.getTitle() + " *MobileNo invalid data ErrorMessage Exists * ");
 			}
 			
 			else if(ExistsCheck(EdaatOR.RegistrationPage_EmailInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_EmailInvalidError);
-				test.log(Status.PASS, "#FUNC-Email  invalid data ErrorMessage Exists" + driver.getTitle() + " *Email invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "Email  invalid data ErrorMessage Exists" + driver.getTitle() + " *Email invalid data ErrorMessage Exists * ");
 			}
 			
 			else if(ExistsCheck(EdaatOR.RegistrationPage_UserNameInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_UserNameInvalidError);
-				test.log(Status.PASS, "#FUNC-UserName  invalid data ErrorMessage Exists" + driver.getTitle() + " *UserName invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "UserName  invalid data ErrorMessage Exists" + driver.getTitle() + " *UserName invalid data ErrorMessage Exists * ");
 			}
 			
 			else if(ExistsCheck(EdaatOR.RegistrationPage_PasswordInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_PasswordInvalidError);
-				test.log(Status.PASS, "#FUNC-Password  invalid data ErrorMessage Exists" + driver.getTitle() + " *Password invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "Password  invalid data ErrorMessage Exists" + driver.getTitle() + " *Password invalid data ErrorMessage Exists * ");
 			}
 			
 			else if(ExistsCheck(EdaatOR.RegistrationPage_ConfirmPasswordInvalidError) ) {
 				VerifyValue(Expected,EdaatOR.RegistrationPage_ConfirmPasswordInvalidError);
-				test.log(Status.PASS, "#FUNC-ConfirmPassword  invalid data ErrorMessage Exists" + driver.getTitle() + " *ConfirmPassword invalid data ErrorMessage Exists * ");
+				test.log(Status.PASS, "ConfirmPassword  invalid data ErrorMessage Exists" + driver.getTitle() + " *ConfirmPassword invalid data ErrorMessage Exists * ");
 			}
 			else {
-				test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+				test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 			}
 		} catch (Exception e) {
 			test.log(Status.FATAL,ErrorFontColorPrefix + "launchApplication Page - loginToApplication failed - unable to Enter" + e+ ErrorFontColorSuffix);
