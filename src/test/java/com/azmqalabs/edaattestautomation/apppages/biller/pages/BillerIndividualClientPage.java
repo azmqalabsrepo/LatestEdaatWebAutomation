@@ -58,13 +58,13 @@ public class BillerIndividualClientPage extends BasePage
         		boolean Ele=BillerSearchIndividualclient(NationalID,FullName);
 	        	if(Ele==true)
 {
-	        		test.log(Status.PASS,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client PASS * " );
+	        		test.log(Status.PASS,"Add Individual client" + driver.getTitle() +" * Add Individual client PASS * " );
 	        	    Log.ReportEvent("PASS", " Verify Add Individual Client is Successful");
 }
         	else
-    	    	test.log(Status.FAIL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+    	    	test.log(Status.FAIL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
     	}catch(Exception e){
-    	test.log(Status.FAIL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
+    	test.log(Status.FAIL,"Add Individual client" + driver.getTitle() +" * Add Individual client FAIL * " );
             this.takeScreenShot();
         	}
     	}
@@ -87,7 +87,7 @@ public class BillerIndividualClientPage extends BasePage
                     scrollDowntillend(driver);
                     this.takeScreenShot();
                     WebClick(EdaatOR.Biller_Individualclient_Back);
-                    test.log(Status.PASS,"#FUNC-Individual Client Table Exists" + driver.getTitle() +" * Individual Client Table Exists PASS * " );
+                    test.log(Status.PASS,"Individual Client Table Exists" + driver.getTitle() +" * Individual Client Table Exists PASS * " );
                   	Log.ReportEvent("PASS", " Verify Upadate Individual Client is Suceessfull");
                 }               
            //Function Summary   : Method to Search Individual Client and deactivate and activate Client status.
@@ -104,7 +104,7 @@ public class BillerIndividualClientPage extends BasePage
                 Thread.sleep(2000);
                 WebClick(EdaatOR.Biller_Individualclient_button);
                 this.takeScreenShot();
-                test.log(Status.PASS,"#FUNC-Individual Client Deactivate/Activate Done" + driver.getTitle() +" * Individual Client Deactivate/Activate Done PASS * " );
+                test.log(Status.PASS,"Individual Client Deactivate/Activate Done" + driver.getTitle() +" * Individual Client Deactivate/Activate Done PASS * " );
               	Log.ReportEvent("PASS", " Verify Upadate Individual Client is Suceessfull");
             }
              //Function Summary   : Method to verify the Export to Excel Functionality.
@@ -112,12 +112,12 @@ public class BillerIndividualClientPage extends BasePage
             else if(Action.equalsIgnoreCase("Excel")) {
                 WebClick(EdaatOR.Biller_Individualclient_export);
                 Thread.sleep(2000);                
-                test.log(Status.PASS,"#FUNC-Export Done" + driver.getTitle() +" * Export Done PASS * " );
+                test.log(Status.PASS,"Export Done" + driver.getTitle() +" * Export Done PASS * " );
               	Log.ReportEvent("PASS", " Verify Upadate Individual Client is Suceessfull");
             }else
-                test.log(Status.FAIL,"#FUNC-Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
+                test.log(Status.FAIL,"Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
         }catch(Exception e){
-            test.log(Status.FATAL,"#FUNC-Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
+            test.log(Status.FATAL,"Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
             this.takeScreenShot();
         }
     }
@@ -138,13 +138,13 @@ public class BillerIndividualClientPage extends BasePage
     			scrollDowntillend(driver);
     			this.takeScreenShot();
     			WebClick(EdaatOR.Biller_Individualclient_Back);
-    			test.log(Status.PASS,"#FUNC-Individual Client Table Exists" + driver.getTitle() +" * Individual Client Table Exists PASS * " );
+    			test.log(Status.PASS,"Individual Client Table Exists" + driver.getTitle() +" * Individual Client Table Exists PASS * " );
 	    		}
 	    	else {
-	    		test.log(Status.FAIL,"#FUNC-Individual Client Table Not Exists" + driver.getTitle() +" * Individual Client Table Not Exists FAIL * " );
+	    		test.log(Status.FAIL,"Individual Client Table Not Exists" + driver.getTitle() +" * Individual Client Table Not Exists FAIL * " );
 	    	}
 	    }catch(Exception e){
-	    	test.log(Status.FATAL,"#FUNC-Table View Individual client" + driver.getTitle() +" * Table View Individual client FAIL * " );
+	    	test.log(Status.FATAL,"Table View Individual client" + driver.getTitle() +" * Table View Individual client FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}
@@ -157,13 +157,13 @@ public class BillerIndividualClientPage extends BasePage
 	    	if(CheckElementClickable(EdaatOR.Biller_Individualclient_export)==true) {
 	    		WebClick(EdaatOR.Biller_Individualclient_export);
 				Thread.sleep(2000);    			
-				test.log(Status.PASS,"#FUNC-Export Individual client Done" + driver.getTitle() +" * Export Individual client Done PASS * " );
+				test.log(Status.PASS,"Export Individual client Done" + driver.getTitle() +" * Export Individual client Done PASS * " );
 	    	}
 	    	else {
-	    		test.log(Status.FAIL,"#FUNC-Export Individual client Not Done" + driver.getTitle() +" * Export Individual client Not Done FAIL  * " );
+	    		test.log(Status.FAIL,"Export Individual client Not Done" + driver.getTitle() +" * Export Individual client Not Done FAIL  * " );
 	    	}
 	    }catch(Exception e){
-	    	test.log(Status.FATAL," #FUNC-Export Individual client Not Done " + driver.getTitle() +" * Export Individual client Not Done FAIL * " );
+	    	test.log(Status.FATAL," Export Individual client Not Done " + driver.getTitle() +" * Export Individual client Not Done FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}	
@@ -185,13 +185,13 @@ public class BillerIndividualClientPage extends BasePage
 				Thread.sleep(2000);
 				WebClick(EdaatOR.Biller_Individualclient_button);
 				this.takeScreenShot();
-				test.log(Status.PASS,"#FUNC-Individual Client Deactivate/Activate Done" + driver.getTitle() +" * Individual Client Deactivate/Activate Done PASS * " );
+				test.log(Status.PASS,"Individual Client Deactivate/Activate Done" + driver.getTitle() +" * Individual Client Deactivate/Activate Done PASS * " );
 	    	}
 	    	else {
-	    		test.log(Status.FAIL,"#FUNC-Individual Client Deactivate/Activate Not Done" + driver.getTitle() +" * Individual Client Deactivate/Activate Not Done FAIL  * " );
+	    		test.log(Status.FAIL,"Individual Client Deactivate/Activate Not Done" + driver.getTitle() +" * Individual Client Deactivate/Activate Not Done FAIL  * " );
 	    		}
 	    }catch(Exception e){
-	    	test.log(Status.FATAL," #FUNC-Individual Client Deactivate/Activate Not Done " + driver.getTitle() +" * Individual Client Deactivate/Activate Not Done FAIL * " );
+	    	test.log(Status.FATAL," Individual Client Deactivate/Activate Not Done " + driver.getTitle() +" * Individual Client Deactivate/Activate Not Done FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}	
@@ -212,12 +212,12 @@ public void Download(Map<Object,Object> testdatamap,Log Log){
     		Thread.sleep(4000);
     		WebClickUsingJS(EdaatOR.Biller_Imgdownload);
     		Thread.sleep(4000);
-    		test.log(Status.PASS,"#FUNC-Download ID " + driver.getTitle() +" * Download ID PASS * " );
+    		test.log(Status.PASS,"Download ID " + driver.getTitle() +" * Download ID PASS * " );
          	Log.ReportEvent("PASS", " Verify Download ID is Suceessfull");
     	}else
-	    	test.log(Status.FAIL,"#FUNC-Download ID" + driver.getTitle() +" * Download ID FAIL * " );
+	    	test.log(Status.FAIL,"Download ID" + driver.getTitle() +" * Download ID FAIL * " );
 	}catch(Exception e){
-	test.log(Status.FAIL,"#FUNC-Download ID" + driver.getTitle() +" * Download ID FAIL * " );
+	test.log(Status.FAIL,"Download ID" + driver.getTitle() +" * Download ID FAIL * " );
 	this.takeScreenShot();
 	}
 }
@@ -277,7 +277,7 @@ public boolean BillerSearchIndividualclientall(String ClientName,String National
   			Log.ReportEvent("PASS", " Verify Individual Client  Search is Suceessful");
      	
     }catch(Exception e){
-//       test.log(Status.FAIL,"#FUNC-Add Individual client" + driver.getTitle() +" * Add Individual client PASS * " );
+//       test.log(Status.FAIL,"Add Individual client" + driver.getTitle() +" * Add Individual client PASS * " );
         this.takeScreenShot();
     }
     return existsElement;
@@ -325,13 +325,13 @@ public void DeleteIndividualClient(String FullName,String SecondName,String Thir
         	boolean Ele=DeleteIndClient(NationalID,ResonforDelete);
         	if(Ele==true)
 {
-        	test.log(Status.PASS,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
+        	test.log(Status.PASS,"Delete Individual client" + driver.getTitle() +" * Delete Individual client PASS * " );
          	Log.ReportEvent("PASS", " Verify Individual Client Delete is Suceessful");
 }
         	else
-    	    	test.log(Status.FAIL,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client FAIL * " );
+    	    	test.log(Status.FAIL,"Delete Individual client" + driver.getTitle() +" * Delete Individual client FAIL * " );
     }catch(Exception e){
-    	test.log(Status.FATAL,"#FUNC-Delete Individual client" + driver.getTitle() +" * Delete Individual client FAIL * " );
+    	test.log(Status.FATAL,"Delete Individual client" + driver.getTitle() +" * Delete Individual client FAIL * " );
         this.takeScreenShot();
     }
 }
@@ -375,13 +375,13 @@ public void UpdateIndividualClient(String FullName,String SecondName,String Thir
         	boolean Ele=UpdateIndClient(FullName, SecondName, ThirdName, LastName, Year, Month,Date, MobileNo, Email, Refno);
         	if(Ele==true)
 {
-        	test.log(Status.PASS,"#FUNC-Updated  Individual client" + driver.getTitle() +" * Updated Individual client PASS * " );
+        	test.log(Status.PASS,"Updated  Individual client" + driver.getTitle() +" * Updated Individual client PASS * " );
         	Log.ReportEvent("PASS", " Verify Upadate Individual Client is Suceessfull");
 }
         	else
-    	    	test.log(Status.FAIL,"#FUNC-Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
+    	    	test.log(Status.FAIL,"Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
     }catch(Exception e){
-    	test.log(Status.FATAL,"#FUNC-Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
+    	test.log(Status.FATAL,"Updated Individual client" + driver.getTitle() +" * Updated Individual client FAIL * " );
         this.takeScreenShot();
     }
 }
@@ -699,18 +699,18 @@ public void CreateIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log
 
 			int val=getInvoiceCountAdd();
 			if(CheckElementExists(EdaatOR.Biller_Invoice_AfteraddInvoice+"["+val+"]/td[10]")==true){
-				test.log(Status.PASS,"#FUNC- Create Individual Client Invoice" + driver.getTitle() +" *Create Individual Client Invoice  PASS * " );
+				test.log(Status.PASS," Create Individual Client Invoice" + driver.getTitle() +" *Create Individual Client Invoice  PASS * " );
 				Log.ReportEvent("PASS", " Verify Create Individual Client Invoice is Suceessfull");
 			}
 			else{
-				test.log(Status.FAIL,"#FUNC- Create Individual Client Invoice" + driver.getTitle() +" * Create Individual Client Invoice FAIL * " );
+				test.log(Status.FAIL," Create Individual Client Invoice" + driver.getTitle() +" * Create Individual Client Invoice FAIL * " );
 			}
 			this.takeScreenShot();
 		
 
 	}
 	catch(Exception e){
-		test.log(Status.FATAL,"#FUNC-Create Individual Client Invoice" + driver.getTitle() +" * Create Individual Client Invoice FAIL * " );
+		test.log(Status.FATAL,"Create Individual Client Invoice" + driver.getTitle() +" * Create Individual Client Invoice FAIL * " );
 		this.takeScreenShot();
 	}
 }
@@ -734,15 +734,15 @@ public void ViewIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log) 
     	this.takeScreenShot();
     	if(ExistsCheck(EdaatOR.Biller_Invoice_form)==true) {
 	    	existsNID=true;
-	    	test.log(Status.PASS,"#FUNC-View Individual Client Invoice " + driver.getTitle() +" * View Individual Client Invoice PASS * " );
+	    	test.log(Status.PASS,"View Individual Client Invoice " + driver.getTitle() +" * View Individual Client Invoice PASS * " );
 	    	Log.ReportEvent("PASS", " Verify View Individual Client Invoice is Suceessfull");
 	    }
     	else {
-    		test.log(Status.FAIL,"#FUNC-View Individual Client Invoice  " + driver.getTitle() +" *View Individual Client Invoice FAIL * " );
+    		test.log(Status.FAIL,"View Individual Client Invoice  " + driver.getTitle() +" *View Individual Client Invoice FAIL * " );
     	}
     	this.takeScreenShot();	    	
     }catch(Exception e){
-		test.log(Status.FATAL,"#FUNC-View Individual Client Invoice" + driver.getTitle() +" *View Individual Client Invoice FAIL * " );
+		test.log(Status.FATAL,"View Individual Client Invoice" + driver.getTitle() +" *View Individual Client Invoice FAIL * " );
 			this.takeScreenShot();
 		}
 	}
@@ -758,11 +758,11 @@ public void ViewIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log) 
 				if (ExistsCheck(EdaatOR.Biller_AlertMsg)){
 				if(ExistsCheck(EdaatOR.Biller_NationalIDExistsAlertMsg)) {
 					VerifyValue1(ExpectedResult,getText(EdaatOR.Biller_NationalIDExistsAlertMsg));				
-					test.log(Status.PASS, "#FUNC-Individual Client NationalID Exists alert Message Exists" + driver.getTitle() + " *NationalID alert Message Exists * ");
+					test.log(Status.PASS, "Individual Client NationalID Exists alert Message Exists" + driver.getTitle() + " *NationalID alert Message Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_ClientRefExistsAlertMsg)){	
 					VerifyValue1(ExpectedResult,getText(EdaatOR.Biller_ClientRefExistsAlertMsg));				
-					test.log(Status.PASS, "#FUNC-Individual Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
+					test.log(Status.PASS, "Individual Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
 				}
 			}
 				else if (ExistsCheck(EdaatOR.Biller_FirstNameErrorMsg) && ExistsCheck(EdaatOR.Biller_SecondNameErrorMsg) && ExistsCheck(EdaatOR.Biller_ThirdNameErrorMsg) && ExistsCheck(EdaatOR.Biller_LastNameErrorMsg) && ExistsCheck(EdaatOR.Biller_NationalIDErrorMsg) && ExistsCheck(EdaatOR.Biller_MobileNoErrorMsg) ){	
@@ -778,40 +778,40 @@ public void ViewIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log) 
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_NationalIDErrorMsg));	
 					Thread.sleep(500);
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_MobileNoErrorMsg));	
-					test.log(Status.PASS, "#FUNC-Individual Client fields  ErrorMessage Exists" + driver.getTitle() + " *   ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client fields  ErrorMessage Exists" + driver.getTitle() + " *   ErrorMessage Exists * ");
 				}
 				
 				else if (ExistsCheck(EdaatOR.Biller_FirstNameErrorMsg)) {
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_FirstNameErrorMsg));
-					test.log(Status.PASS, "#FUNC-Individual Client FirstName ErrorMessage Exists" + driver.getTitle() + " * FirstName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client FirstName ErrorMessage Exists" + driver.getTitle() + " * FirstName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_SecondNameErrorMsg)) {
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_SecondNameErrorMsg));
-					test.log(Status.PASS, "#FUNC-Individual Client SecondName ErrorMessage Exists" + driver.getTitle() + " *SecondName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client SecondName ErrorMessage Exists" + driver.getTitle() + " *SecondName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_ThirdNameErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_ThirdNameErrorMsg));			
-					test.log(Status.PASS, "#FUNC-Individual Client ThirdName ErrorMessage Exists" + driver.getTitle() + " *ThirdName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client ThirdName ErrorMessage Exists" + driver.getTitle() + " *ThirdName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_LastNameErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_LastNameErrorMsg));		
-					test.log(Status.PASS, "#FUNC-Individual Client LastName ErrorMessage Exists" + driver.getTitle() + " *LastName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client LastName ErrorMessage Exists" + driver.getTitle() + " *LastName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_NationalIDErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_NationalIDErrorMsg));				
-					test.log(Status.PASS, "#FUNC-Individual Client NationalID ErrorMessage Exists" + driver.getTitle() + " *NationalID ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client NationalID ErrorMessage Exists" + driver.getTitle() + " *NationalID ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_NationalIDStartsError)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_NationalIDStartsError));			
-					test.log(Status.PASS, "#FUNC-Individual Client National ID starts with ErrorMessage Exists" + driver.getTitle() + " *National ID  ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client National ID starts with ErrorMessage Exists" + driver.getTitle() + " *National ID  ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_MobileNoErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_MobileNoErrorMsg));			
-					test.log(Status.PASS, "#FUNC-Individual Client Mobile Number ErrorMessage Exists" + driver.getTitle() + " *Mobile Number  ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client Mobile Number ErrorMessage Exists" + driver.getTitle() + " *Mobile Number  ErrorMessage Exists * ");
 				}
 				
 			  else {
-					test.log(Status.FAIL, "#FUNC-No error Exists" + driver.getTitle() + " * No error Exists * ");
+					test.log(Status.FAIL, "No error Exists" + driver.getTitle() + " * No error Exists * ");
 				}
 			} 
 			catch (Exception e) {
@@ -833,10 +833,10 @@ public void ViewIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log) 
 				if (ExistsCheck(EdaatOR.Biller_AlertMsg)){	
 					if(ExistsCheck(EdaatOR.Biller_ClientRefExistsAlertMsg)) {
 						VerifyValue1(ExpectedResult,getText(EdaatOR.Biller_ClientRefExistsAlertMsg));				
-						test.log(Status.PASS, "#FUNC-Individual Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
+						test.log(Status.PASS, "Individual Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
 					}else if(ExistsCheck(EdaatOR.Biller_NationalIDExistsAlertMsg)) {
 						VerifyValue1(ExpectedResult,getText(EdaatOR.Biller_NationalIDExistsAlertMsg));				
-						test.log(Status.PASS, "#FUNC-Individual Client NationalID Exists alert Message Exists" + driver.getTitle() + " *NationalID alert Message Exists * ");
+						test.log(Status.PASS, "Individual Client NationalID Exists alert Message Exists" + driver.getTitle() + " *NationalID alert Message Exists * ");
 					}
 				}
 				else if (ExistsCheck(EdaatOR.Biller_MandatoryErrorMsg)){	
@@ -850,30 +850,30 @@ public void ViewIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log) 
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_LastNameErrorMsg));
 					Thread.sleep(500);
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_MobileNoErrorMsg));	
-					test.log(Status.PASS, "#FUNC-Edit Individual Client  ErrorMessage Exists" + driver.getTitle() + " *   ErrorMessage Exists * ");
+					test.log(Status.PASS, "Edit Individual Client  ErrorMessage Exists" + driver.getTitle() + " *   ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_FirstNameErrorMsg)) {
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_FirstNameErrorMsg));
-					test.log(Status.PASS, "#FUNC-Individual Client FirstName ErrorMessage Exists" + driver.getTitle() + " * FirstName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client FirstName ErrorMessage Exists" + driver.getTitle() + " * FirstName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_SecondNameErrorMsg)) {
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_SecondNameErrorMsg));
-					test.log(Status.PASS, "#FUNC-Individual Client SecondName ErrorMessage Exists" + driver.getTitle() + " *SecondName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client SecondName ErrorMessage Exists" + driver.getTitle() + " *SecondName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_ThirdNameErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_ThirdNameErrorMsg));			
-					test.log(Status.PASS, "#FUNC-Individual Client ThirdName ErrorMessage Exists" + driver.getTitle() + " *ThirdName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client ThirdName ErrorMessage Exists" + driver.getTitle() + " *ThirdName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_LastNameErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_LastNameErrorMsg));		
-					test.log(Status.PASS, "#FUNC-Individual Client LastName ErrorMessage Exists" + driver.getTitle() + " *LastName ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client LastName ErrorMessage Exists" + driver.getTitle() + " *LastName ErrorMessage Exists * ");
 				}
 				else if (ExistsCheck(EdaatOR.Biller_MobileNoErrorMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_MobileNoErrorMsg));			
-					test.log(Status.PASS, "#FUNC-Individual Client Mobile Number ErrorMessage Exists" + driver.getTitle() + " *Mobile Number  ErrorMessage Exists * ");
+					test.log(Status.PASS, "Individual Client Mobile Number ErrorMessage Exists" + driver.getTitle() + " *Mobile Number  ErrorMessage Exists * ");
 				}
 				else {
-					test.log(Status.FAIL, "#FUNC-No error Exists" + driver.getTitle() + " * No error Exists * ");
+					test.log(Status.FAIL, "No error Exists" + driver.getTitle() + " * No error Exists * ");
 				}
 			} 
 			catch (Exception e) {
@@ -898,10 +898,10 @@ public void ViewIndividualClientInvoice(Map<Object,Object> testdatamap,Log Log) 
 				this.takeScreenShot();
 				if (ExistsCheck(EdaatOR.Biller_DeleteClientErrMsg)){	
 					VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_DeleteClientErrMsg));			
-					test.log(Status.PASS, "#FUNC-Individual Client delete ErrorMessage Exists" + driver.getTitle() + " *Delete Error Message Exists * ");
+					test.log(Status.PASS, "Individual Client delete ErrorMessage Exists" + driver.getTitle() + " *Delete Error Message Exists * ");
 				}
 				else {
-					test.log(Status.FAIL, "#FUNC-No error Exists" + driver.getTitle() + " * No error Exists * ");
+					test.log(Status.FAIL, "No error Exists" + driver.getTitle() + " * No error Exists * ");
 				}
 			} 
 			catch (Exception e) {

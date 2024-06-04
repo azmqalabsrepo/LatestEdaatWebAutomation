@@ -61,14 +61,14 @@ public class BillerCorporatePage extends BasePage
         	AddCorpclient(CorporateName,CRNumber,PersonName,PersonID,MobileNo,Email,ClientRefno);
         		boolean Ele=BillerSearchCorporateclient(ClientRefno, CorporateName,CRNumber);
 	        	if(Ele==true) {
-	        		test.log(Status.PASS,"#FUNC-Add Corporate client" + driver.getTitle() +" * Add Corporate client PASS * " );
+	        		test.log(Status.PASS,"Add Corporate client" + driver.getTitle() +" * Add Corporate client PASS * " );
 	        	Log.ReportEvent("PASS", "Verify Add Corporate Client is Suceessful");
 	        	}else {
-         	test.log(Status.FAIL,"#FUNC-Add Corporate client" + driver.getTitle() +" * Add Corporate client FAIL * " );
+         	test.log(Status.FAIL,"Add Corporate client" + driver.getTitle() +" * Add Corporate client FAIL * " );
          	}
 	        	}
         	catch(Exception e){
-        	test.log(Status.FATAL,"#FUNC-Add Corporate client" + driver.getTitle() +" * Add Corporate client FAIL * " );
+        	test.log(Status.FATAL,"Add Corporate client" + driver.getTitle() +" * Add Corporate client FAIL * " );
             this.takeScreenShot();
         	}
     	}
@@ -89,7 +89,7 @@ public class BillerCorporatePage extends BasePage
 	                scrollDowntillend(driver);
 	                this.takeScreenShot();
 	                WebClick(EdaatOR.Biller_Individualclient_Back);
-	                test.log(Status.PASS,"#FUNC-Corporate Client Table Exists" + driver.getTitle() +" * Corporatee Client Table Exists PASS * " );
+	                test.log(Status.PASS,"Corporate Client Table Exists" + driver.getTitle() +" * Corporatee Client Table Exists PASS * " );
 	                Log.ReportEvent("PASS", "Verify Upadate Individual Client is Suceessfull");
 	            }               
 	        }else if(Action.equalsIgnoreCase("Deactivate")) {
@@ -104,18 +104,18 @@ public class BillerCorporatePage extends BasePage
 	            Thread.sleep(2000);
 	            this.takeScreenShot();
 	            WebClick(EdaatOR.Biller_Individualclient_button);
-	            test.log(Status.PASS,"#FUNC-Corporate Client Deactivate/Activate Done" + driver.getTitle() +" * Corporate Client Deactivate/Activate Done PASS * " );
+	            test.log(Status.PASS,"Corporate Client Deactivate/Activate Done" + driver.getTitle() +" * Corporate Client Deactivate/Activate Done PASS * " );
 	            Log.ReportEvent("PASS", "Verify Upadate Individual Client is Suceessfull");
 	        }else if(Action.equalsIgnoreCase("Excel")) {
 	            WebClick(EdaatOR.Biller_Individualclient_export);
 	            Thread.sleep(2000);    
 	            this.takeScreenShot();
-	            test.log(Status.PASS,"#FUNC-Export Done" + driver.getTitle() +" * Export Done PASS * " );
+	            test.log(Status.PASS,"Export Done" + driver.getTitle() +" * Export Done PASS * " );
 	            Log.ReportEvent("PASS", "Verify Upadate Individual Client is Suceessfull");
 	        }else
-	            test.log(Status.FAIL,"#FUNC-Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
+	            test.log(Status.FAIL,"Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
 	    }catch(Exception e){
-	        test.log(Status.FATAL,"#FUNC-Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
+	        test.log(Status.FATAL,"Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}
@@ -159,13 +159,13 @@ public void TableGridview(String CorporateName){
     			scrollDowntillend(driver);
     			this.takeScreenShot();
     			WebClick(EdaatOR.Biller_Individualclient_Back);
-    			test.log(Status.PASS,"#FUNC-Corporate Client Table Exists" + driver.getTitle() +" * Corporatee Client Table Exists PASS * " );
+    			test.log(Status.PASS,"Corporate Client Table Exists" + driver.getTitle() +" * Corporatee Client Table Exists PASS * " );
     		}       		
 	    	else {
-	    		test.log(Status.FAIL,"#FUNC-Corporate Client Table Not Exists" + driver.getTitle() +" * Corporate Client Table Not Exists FAIL * " );
+	    		test.log(Status.FAIL,"Corporate Client Table Not Exists" + driver.getTitle() +" * Corporate Client Table Not Exists FAIL * " );
 	    	}
 	    }catch(Exception e){
-	    	test.log(Status.FATAL,"#FUNC-Table View Corporate client" + driver.getTitle() +" * Table View Corporate client FAIL * " );
+	    	test.log(Status.FATAL,"Table View Corporate client" + driver.getTitle() +" * Table View Corporate client FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}
@@ -187,13 +187,13 @@ public void ActivateDactivate(String CorporateName){
 			this.takeScreenShot();
 			WebClick(EdaatOR.Biller_Individualclient_button);
 			
-			test.log(Status.PASS,"#FUNC-Corporate Client Deactivate/Activate Done" + driver.getTitle() +" * Corporate Client Deactivate/Activate Done PASS * " );
+			test.log(Status.PASS,"Corporate Client Deactivate/Activate Done" + driver.getTitle() +" * Corporate Client Deactivate/Activate Done PASS * " );
     	}	   		
     	else {
-    		test.log(Status.FAIL,"#FUNC-Corporate Client Deactivate/Activate Not Done" + driver.getTitle() +" * Corporate Client Deactivate/Activate Not Done FAIL * " );
+    		test.log(Status.FAIL,"Corporate Client Deactivate/Activate Not Done" + driver.getTitle() +" * Corporate Client Deactivate/Activate Not Done FAIL * " );
     	}
     }catch(Exception e){
-    	test.log(Status.FATAL,"#FUNC-Corporate Client Deactivate/Activate Not Done" + driver.getTitle() +" * Table View Corporate client Not Done * " );
+    	test.log(Status.FATAL,"Corporate Client Deactivate/Activate Not Done" + driver.getTitle() +" * Table View Corporate client Not Done * " );
         this.takeScreenShot();
     }
 }
@@ -206,13 +206,13 @@ public void Export(){
     		WebClick(EdaatOR.Biller_Individualclient_export);
 			Thread.sleep(2000);    
 			this.takeScreenShot();
-			test.log(Status.PASS,"#FUNC-Export Done" + driver.getTitle() +" * Export Done PASS * " );
+			test.log(Status.PASS,"Export Done" + driver.getTitle() +" * Export Done PASS * " );
     	}	   		
     	else {
-    		test.log(Status.FAIL,"#FUNC-Export Not Done" + driver.getTitle() +" * Export Not Done FAIL * " );
+    		test.log(Status.FAIL,"Export Not Done" + driver.getTitle() +" * Export Not Done FAIL * " );
     	}
     }catch(Exception e){
-    	test.log(Status.FATAL,"#FUNC-Export Not Done" + driver.getTitle() +" * Export Not Done * " );
+    	test.log(Status.FATAL,"Export Not Done" + driver.getTitle() +" * Export Not Done * " );
         this.takeScreenShot();
     }
 }
@@ -234,17 +234,17 @@ public void Export(){
 				Thread.sleep(2000);
             	existsElement=ExistsCheck("//td[text()='"+CRNumber+"']");
             	if(existsElement==true) {
-    	        	test.log(Status.PASS,"#FUNC-Search Corporate client" + driver.getTitle() +" * Search Corporate client PASS * " );
+    	        	test.log(Status.PASS,"Search Corporate client" + driver.getTitle() +" * Search Corporate client PASS * " );
     	        	Log.ReportEvent("PASS", "Verify Corporate Client Search is Suceessful");
             	}
             	else {
-    	        	test.log(Status.FAIL,"#FUNC-Search Corporate client" + driver.getTitle() +" * Search Corporate client FAIL * " );
+    	        	test.log(Status.FAIL,"Search Corporate client" + driver.getTitle() +" * Search Corporate client FAIL * " );
             	}
 				Thread.sleep(1000);
 				this.takeScreenShot();
            	
         }catch(Exception e){
-        	test.log(Status.FATAL,"#FUNC-Search Corporate client" + driver.getTitle() +" * Search Corporate client FAIL * " );
+        	test.log(Status.FATAL,"Search Corporate client" + driver.getTitle() +" * Search Corporate client FAIL * " );
             this.takeScreenShot();
         }
         return existsElement;
@@ -286,13 +286,13 @@ public void Export(){
 	    		BillerSearchCorporateclient(ClientRefno,CorporateName,CRNumber);
 	        	boolean Ele=DeleteCorpClient(ClientRefno,ResonforDelete);
 	        	if(Ele==true){
-	        	test.log(Status.PASS,"#FUNC-Delete Corporate client" + driver.getTitle() +" * Delete Corporate client PASS * " );
+	        	test.log(Status.PASS,"Delete Corporate client" + driver.getTitle() +" * Delete Corporate client PASS * " );
 	        	Log.ReportEvent("PASS", "Verify Delete Corporate Client is Suceessfull");
 }
 	        	else
-	    	    	test.log(Status.FAIL,"#FUNC-Delete Corporate client" + driver.getTitle() +" * Delete Corporate client FAIL * " );
+	    	    	test.log(Status.FAIL,"Delete Corporate client" + driver.getTitle() +" * Delete Corporate client FAIL * " );
 	    }catch(Exception e){
-	    	test.log(Status.FATAL,"#FUNC-Delete Corporate client" + driver.getTitle() +" * Delete Corporate client FAIL * " );
+	    	test.log(Status.FATAL,"Delete Corporate client" + driver.getTitle() +" * Delete Corporate client FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}
@@ -336,13 +336,13 @@ public void Export(){
 	        	boolean Ele=UpdateCorpClient(CorporateName, PersonName, PersonID, ClientRefno,MobileNo, Email);
 	        	if(Ele==true)
 {
-	        	test.log(Status.PASS,"#FUNC-Updated  Corporate client" + driver.getTitle() +" * Updated Corporate client PASS * " );
+	        	test.log(Status.PASS,"Updated  Corporate client" + driver.getTitle() +" * Updated Corporate client PASS * " );
 	        	Log.ReportEvent("PASS", "Verify Upadate Corporate Client is successful");
 }
 	        	else
-	    	    	test.log(Status.FAIL,"#FUNC-Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
+	    	    	test.log(Status.FAIL,"Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
 	    }catch(Exception e){
-	    	test.log(Status.FATAL,"#FUNC-Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
+	    	test.log(Status.FATAL,"Updated Corporate client" + driver.getTitle() +" * Updated Corporate client FAIL * " );
 	        this.takeScreenShot();
 	    }
 	}
@@ -595,18 +595,18 @@ public void Export(){
 				int val=getInvoiceCountAdd();
 	        	Thread.sleep(1000);	    	
 				if(CheckElementExists(EdaatOR.Biller_Invoice_AfteraddInvoice+"["+val+"]/td[10]")==true){
-					test.log(Status.PASS,"#FUNC- Create Corporate Client Invoice" + driver.getTitle() +" * Create Corporate Client Invoice PASS * " );
+					test.log(Status.PASS," Create Corporate Client Invoice" + driver.getTitle() +" * Create Corporate Client Invoice PASS * " );
 					Log.ReportEvent("PASS", "Verify Create Corporate Client Invoice is Suceessfull");
 				}
 				else{
-					test.log(Status.FAIL,"#FUNC- Create Corporate Client Invoice" + driver.getTitle() +" *Create Corporate Client Invoice FAIL * " );
+					test.log(Status.FAIL," Create Corporate Client Invoice" + driver.getTitle() +" *Create Corporate Client Invoice FAIL * " );
 				}
 				this.takeScreenShot();
 			
 
 		}
 		catch(Exception e){
-			test.log(Status.FATAL,"#FUNC-Create Corporate Client Invoice" + driver.getTitle() +" * Create Corporate Client Invoice FAIL * " );
+			test.log(Status.FATAL,"Create Corporate Client Invoice" + driver.getTitle() +" * Create Corporate Client Invoice FAIL * " );
 			this.takeScreenShot();
 		}
 	}
@@ -621,7 +621,7 @@ public void Export(){
 				try {
 					if(ExistsCheck(EdaatOR.Biller_ClientRefExistsAlertMsg)) {
 						VerifyValue1(ExpectedResult,getText(EdaatOR.Biller_ClientRefExistsAlertMsg));				
-						test.log(Status.PASS, "#FUNC-Corporate Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
+						test.log(Status.PASS, "Corporate Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
 						}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredFieldsErrMsg)){	
 						this.takeScreenShot();
@@ -630,22 +630,22 @@ public void Export(){
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthNameErrMsg));
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthIDErrMsg));
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthMobileNoErrMsg));	
-						test.log(Status.PASS, "#FUNC-Corporate Client Required field ErrorMessage Exists" + driver.getTitle() + " *   Error Message Exists * ");
+						test.log(Status.PASS, "Corporate Client Required field ErrorMessage Exists" + driver.getTitle() + " *   Error Message Exists * ");
 						}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredCRNoErrMsg)) {
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredCRNoErrMsg));
-						test.log(Status.PASS, "#FUNC-Corporate Client CR Number ErrorMessage Exists" + driver.getTitle() + " *CR Number ErrorMessage Exists * ");
+						test.log(Status.PASS, "Corporate Client CR Number ErrorMessage Exists" + driver.getTitle() + " *CR Number ErrorMessage Exists * ");
 						}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredAuthIDErrMsg)){	
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthIDErrMsg));			
-						test.log(Status.PASS, "#FUNC-Corporate Client Authorized person ID ErrorMessage Exists" + driver.getTitle() + " *Authorized person ID ErrorMessage Exists * ");
+						test.log(Status.PASS, "Corporate Client Authorized person ID ErrorMessage Exists" + driver.getTitle() + " *Authorized person ID ErrorMessage Exists * ");
 						}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredAuthMobileNoErrMsg)){	
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthMobileNoErrMsg));		
-						test.log(Status.PASS, "#FUNC-Corporate Client Mobile No ErrorMessage Exists" + driver.getTitle() + " *Mobile No ErrorMessage Exists * ");
+						test.log(Status.PASS, "Corporate Client Mobile No ErrorMessage Exists" + driver.getTitle() + " *Mobile No ErrorMessage Exists * ");
 						}
 					else {
-						test.log(Status.FAIL, "#FUNC-No error Exists" + driver.getTitle() + " * No error Exists * ");
+						test.log(Status.FAIL, "No error Exists" + driver.getTitle() + " * No error Exists * ");
 						}
 					} 
 				catch (Exception e) {
@@ -666,7 +666,7 @@ public void Export(){
 				try {
 					if(ExistsCheck(EdaatOR.Biller_ClientRefExistsAlertMsg)) {
 						VerifyValue1(ExpectedResult,getText(EdaatOR.Biller_ClientRefExistsAlertMsg));				
-						test.log(Status.PASS, "#FUNC-Corporate Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
+						test.log(Status.PASS, "Corporate Client Reference number Exists alert Message Exists" + driver.getTitle() + " *Client Ref alert Message Exists * ");
 					}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredFieldsErrMsg)){	
 						this.takeScreenShot();
@@ -674,18 +674,18 @@ public void Export(){
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthNameErrMsg));
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthIDErrMsg));
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthMobileNoErrMsg));	
-						test.log(Status.PASS, "#FUNC-Corporate Client Required field ErrorMessage Exists" + driver.getTitle() + " *   Error Message Exists * ");
+						test.log(Status.PASS, "Corporate Client Required field ErrorMessage Exists" + driver.getTitle() + " *   Error Message Exists * ");
 					}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredAuthIDErrMsg)){	
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthIDErrMsg));			
-						test.log(Status.PASS, "#FUNC-Corporate Client Authorized person ID ErrorMessage Exists" + driver.getTitle() + " *Authorized person ID ErrorMessage Exists * ");
+						test.log(Status.PASS, "Corporate Client Authorized person ID ErrorMessage Exists" + driver.getTitle() + " *Authorized person ID ErrorMessage Exists * ");
 					}
 					else if (ExistsCheck(EdaatOR.Biller_RequiredAuthMobileNoErrMsg)){	
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_RequiredAuthMobileNoErrMsg));		
-						test.log(Status.PASS, "#FUNC-Corporate Client Mobile No ErrorMessage Exists" + driver.getTitle() + " *Mobile No ErrorMessage Exists * ");
+						test.log(Status.PASS, "Corporate Client Mobile No ErrorMessage Exists" + driver.getTitle() + " *Mobile No ErrorMessage Exists * ");
 					}
 					else {
-						test.log(Status.FAIL, "#FUNC-No error Exists" + driver.getTitle() + " * No error Exists * ");
+						test.log(Status.FAIL, "No error Exists" + driver.getTitle() + " * No error Exists * ");
 						}
 	 				} 
 					catch (Exception e) {
@@ -710,10 +710,10 @@ public void Export(){
 					this.takeScreenShot();
 					if (ExistsCheck(EdaatOR.Biller_DeleteClientErrMsg)){	
 						VerifyValue1(ExpectedResult, getText(EdaatOR.Biller_DeleteClientErrMsg));			
-						test.log(Status.PASS, "#FUNC-Corporate Client delete ErrorMessage Exists" + driver.getTitle() + " *Delete Error Message Exists * ");
+						test.log(Status.PASS, "Corporate Client delete ErrorMessage Exists" + driver.getTitle() + " *Delete Error Message Exists * ");
 					}
 	 				else {
-						test.log(Status.FAIL, "#FUNC-No error Exists" + driver.getTitle() + " * No error Exists * ");
+						test.log(Status.FAIL, "No error Exists" + driver.getTitle() + " * No error Exists * ");
 					}
 				}
 				catch (Exception e) {

@@ -68,12 +68,12 @@ public class ClientMyAccountPage extends BasePage {
 		    Thread.sleep(1500);
 		    WebClick(EdaatOR.ClientMyAccUpdateProfileSaveChangesBTN);
 			Thread.sleep(1500);	
-			test.log(Status.PASS,"#FUNC-Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Pass * " );
+			test.log(Status.PASS,"Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Pass * " );
 		  	Log.ReportEvent("PASS", "Verify Update Client Profile Sucessful");
 			}
 			catch (Exception e) {
 				this.takeScreenShot();
-				test.log(Status.FATAL,"#FUNC-Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Fail * " );
+				test.log(Status.FATAL,"Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Fail * " );
 			}		
 	}
 //Function summary:Verify Update Client Profile and Close
@@ -93,13 +93,13 @@ public class ClientMyAccountPage extends BasePage {
 		    Thread.sleep(1500);
 		    WebClick(EdaatOR.ClientMyAccUpdateProfileCancelbtn);
 			Thread.sleep(1500);
-			test.log(Status.PASS,"#FUNC-Verify Update Client Profile Close" + driver.getTitle() +" * Update Client Profile Close is Pass * " );
+			test.log(Status.PASS,"Verify Update Client Profile Close" + driver.getTitle() +" * Update Client Profile Close is Pass * " );
 		  	Log.ReportEvent("PASS", "Verify to update client Profile & Close");
             this.takeScreenShot();
 			}
 			catch (Exception e) {
 				this.takeScreenShot();
-				test.log(Status.FATAL,"#FUNC-Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Fail * " );
+				test.log(Status.FATAL,"Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Fail * " );
 			}		
 	}
 	//Function summary:Verify Update Client Login info and close.
@@ -119,13 +119,13 @@ public class ClientMyAccountPage extends BasePage {
 			    WebClick(EdaatOR.ClientMyAccUpdateProfileCancelbtn);
 				Thread.sleep(800);
 				this.takeScreenShot();
-				test.log(Status.PASS,"#FUNC-Verify Update Client Profile Close" + driver.getTitle() +" * Update Client Profile Close is Pass * " );
+				test.log(Status.PASS,"Verify Update Client Profile Close" + driver.getTitle() +" * Update Client Profile Close is Pass * " );
 	        	Log.ReportEvent("PASS", " verify update client login information");
 	
 	      }
 				catch (Exception e) {
 					this.takeScreenShot();
-					test.log(Status.FATAL,"#FUNC-Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Fail * " );
+					test.log(Status.FATAL,"Verify Update and save Profile " + driver.getTitle() +" * Update Client Profile and Save is Fail * " );
 				}		
 	
 		}	
@@ -160,13 +160,13 @@ public class ClientMyAccountPage extends BasePage {
 		VerifyValue1(getText("//span[text()='"+testdatamap.get("VerifyMessage").toString()+"']"),testdatamap.get("VerifyMessage").toString());
 		Thread.sleep(2000);
 		this.takeScreenShot();
-		test.log(Status.PASS,"#FUNC-Verify Incase New Password not match Confirm Password" + driver.getTitle() +" * New Password not match Confirm Password is Pass * " );
+		test.log(Status.PASS,"Verify Incase New Password not match Confirm Password" + driver.getTitle() +" * New Password not match Confirm Password is Pass * " );
     	Log.ReportEvent("PASS", " Verify Incase New Password not match Confirm Password is successfull ");
 
 		}
 		catch (Exception e) {
 			
-		test.log(Status.FATAL,"#FUNC-Verify Incase New Password not match Confirm Password" + driver.getTitle() +" *  New Password not match Confirm Password is Fail * " );
+		test.log(Status.FATAL,"Verify Incase New Password not match Confirm Password" + driver.getTitle() +" *  New Password not match Confirm Password is Fail * " );
 		this.takeScreenShot();
 		}
 
@@ -190,7 +190,7 @@ public class ClientMyAccountPage extends BasePage {
 			{
 			this.takeScreenShot();
 			WebClickUsingJS(EdaatOR.ClientLogininfoyesbtn);
-			test.log(Status.PASS,"#FUNC-Verify Update Client Login Info Save" + driver.getTitle() +" * Update Client Login Info Save is Pass * " );
+			test.log(Status.PASS,"Verify Update Client Login Info Save" + driver.getTitle() +" * Update Client Login Info Save is Pass * " );
 			this.takeScreenShot();
         	Log.ReportEvent("PASS", "Verify to update client Login Info & Save is Successful");
 			}
@@ -198,7 +198,7 @@ public class ClientMyAccountPage extends BasePage {
 		catch(Exception e)
 		{
 			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Verify Update Client Login Info Save" + driver.getTitle() +" * Update Client Login Info Save is Pass * " );
+			test.log(Status.FATAL,"Verify Update Client Login Info Save" + driver.getTitle() +" * Update Client Login Info Save is Pass * " );
 		}
 		
 	
@@ -225,38 +225,38 @@ public class ClientMyAccountPage extends BasePage {
 				VerifyValue(testdatamap.get("Expected").toString(), EdaatOR.ClientLogininfoConfiPasswordError);				
 				this.takeScreenShot();
 				Thread.sleep(1000);
-				test.log(Status.PASS, "#FUNC-Client old Password,New Password and Confirm Password ErrorMessage Exists" + driver.getTitle() + " * Client oldpassword,Newpasswors and Confirm Password ErrorMessage Exists * ");
+				test.log(Status.PASS, "Client old Password,New Password and Confirm Password ErrorMessage Exists" + driver.getTitle() + " * Client oldpassword,Newpasswors and Confirm Password ErrorMessage Exists * ");
 			}
 			else if (ExistsCheck(EdaatOR.ClientLogininfoNewPasswordError)) {
 				
 				VerifyValue(testdatamap.get("Expected").toString(), EdaatOR.ClientLogininfoNewPasswordError);
-				test.log(Status.PASS, "#FUNC-Client Invalid New Password  ErrorMessage Exists" + driver.getTitle() + " * Client Invalid Newpassword Error Message Exists * ");
+				test.log(Status.PASS, "Client Invalid New Password  ErrorMessage Exists" + driver.getTitle() + " * Client Invalid Newpassword Error Message Exists * ");
 				this.takeScreenShot();
 				Thread.sleep(1000);
 			}
 			else if (ExistsCheck(EdaatOR.ClientLogininfoConfiPasswordError)) {
 				
 				VerifyValue(testdatamap.get("Expected").toString(), EdaatOR.ClientLogininfoConfiPasswordError);
-				test.log(Status.PASS, "#FUNC-Client Invalid Confirm Password  ErrorMessage Exists" + driver.getTitle() + " * Client Invalid Confirmpassword Error Message Exists * ");
+				test.log(Status.PASS, "Client Invalid Confirm Password  ErrorMessage Exists" + driver.getTitle() + " * Client Invalid Confirmpassword Error Message Exists * ");
 				this.takeScreenShot();
 				Thread.sleep(1000);
 			}
 			else if (ExistsCheck(EdaatOR.ClientLogininfoOldPasswordInvalid)) {
 				
 				VerifyValue(testdatamap.get("Expected").toString(), EdaatOR.ClientLogininfoOldPasswordInvalid);
-				test.log(Status.PASS, "#FUNC-Client Invalid old Password  ErrorMessage Exists" + driver.getTitle() + " * Client Invalid OldPassword Error Message Exists * ");
+				test.log(Status.PASS, "Client Invalid old Password  ErrorMessage Exists" + driver.getTitle() + " * Client Invalid OldPassword Error Message Exists * ");
 				this.takeScreenShot();
 				Thread.sleep(1000);
 			}
 			else
 			{
-				test.log(Status.FAIL, "#FUNC-Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
+				test.log(Status.FAIL, "Element Not Exists" + driver.getTitle() + " * Element Not Exists * ");
 			}
 		}
 		catch(Exception e)
 		{
 			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Verify Update Client Login Info Error Message validation" + driver.getTitle() +" * Update Client Login Info  Error Message validation is Pass * " );
+			test.log(Status.FATAL,"Verify Update Client Login Info Error Message validation" + driver.getTitle() +" * Update Client Login Info  Error Message validation is Pass * " );
 		}	
 		
 	}
@@ -290,7 +290,7 @@ public class ClientMyAccountPage extends BasePage {
 		catch(Exception e)
 		{
 			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Verify Update Client Login Info Save" + driver.getTitle() +" * Update Client Login Info Save is Pass * " );
+			test.log(Status.FATAL,"Verify Update Client Login Info Save" + driver.getTitle() +" * Update Client Login Info Save is Pass * " );
 		}
 	}
 	
@@ -301,63 +301,63 @@ public class ClientMyAccountPage extends BasePage {
 		if(Field.equalsIgnoreCase("All"))
 		{
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_FirstnameError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile First Name text field Error Message" + driver.getTitle() +" * Update Client Profile First Name text field Error Message is Pass * " );
+		test.log(Status.PASS,"Verify Update Client Profile First Name text field Error Message" + driver.getTitle() +" * Update Client Profile First Name text field Error Message is Pass * " );
 	    Thread.sleep(1500);
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_SecondnameError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile Second Name text field Error Message" + driver.getTitle() +" *Update Client Profile Second Name text field Error Message is Pass  * " );
+		test.log(Status.PASS,"Verify Update Client Profile Second Name text field Error Message" + driver.getTitle() +" *Update Client Profile Second Name text field Error Message is Pass  * " );
 	    Thread.sleep(1500);
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_thirdnameError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile Third Name text field Error Message" + driver.getTitle() +" * Update Client Profile third Name text field Error Message is Pass  * " );
+		test.log(Status.PASS,"Verify Update Client Profile Third Name text field Error Message" + driver.getTitle() +" * Update Client Profile third Name text field Error Message is Pass  * " );
 	    Thread.sleep(1500);
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_lastnameError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile last Name text field Error Message" + driver.getTitle() +" * Update Client Profile last Name text field Error Message is Pass * " );
+		test.log(Status.PASS,"Verify Update Client Profile last Name text field Error Message" + driver.getTitle() +" * Update Client Profile last Name text field Error Message is Pass * " );
 	    Thread.sleep(1500);
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_DateofbirthError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile Date of birth text field Error Message" + driver.getTitle() +" * Update Client Profile Date of birth text field Error Message is Pass * " );
+		test.log(Status.PASS,"Verify Update Client Profile Date of birth text field Error Message" + driver.getTitle() +" * Update Client Profile Date of birth text field Error Message is Pass * " );
 	    Thread.sleep(1500);
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_DateofbirthHijiriError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile Date of birth hijiri text field Error Message" + driver.getTitle() +" * Update Client Profile Date of birth hijiri text field Error Message is Pass* " );
+		test.log(Status.PASS,"Verify Update Client Profile Date of birth hijiri text field Error Message" + driver.getTitle() +" * Update Client Profile Date of birth hijiri text field Error Message is Pass* " );
 	    Thread.sleep(1500);
 	    VerifyValue1(getText(EdaatOR.ClientMyaccount_MobilenumError),testdatamap.get("Expected1").toString());
-		test.log(Status.PASS,"#FUNC-Verify Update Client Profile Mobile number text field Error Message" + driver.getTitle() +" * Update Client Profile Mobile Number text field Error Message is Pass* " );
+		test.log(Status.PASS,"Verify Update Client Profile Mobile number text field Error Message" + driver.getTitle() +" * Update Client Profile Mobile Number text field Error Message is Pass* " );
 	   }
 		else {
 			
 			if(CheckElementExists(EdaatOR.ClientMyaccount_FirstnameError))
 			{
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_FirstnameError),testdatamap.get("Expected2").toString());
-			   test.log(Status.PASS,"#FUNC-Verify Update Client Profile First Name text field Error Message" + driver.getTitle() +" * Update Client Profile First Name text field Error Message is Pass * " );
+			   test.log(Status.PASS,"Verify Update Client Profile First Name text field Error Message" + driver.getTitle() +" * Update Client Profile First Name text field Error Message is Pass * " );
 			   this.takeScreenShot();
 			}
 			else if(CheckElementExists(EdaatOR.ClientMyaccount_SecondnameError))
 			{
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_SecondnameError),testdatamap.get("Expected2").toString());
-				test.log(Status.PASS,"#FUNC-Verify Update Client Profile Second Name text field Error Message" + driver.getTitle() +" *Update Client Profile Second Name text field Error Message is Pass  * " );
+				test.log(Status.PASS,"Verify Update Client Profile Second Name text field Error Message" + driver.getTitle() +" *Update Client Profile Second Name text field Error Message is Pass  * " );
 			   this.takeScreenShot();
 			}
 			else if(CheckElementExists(EdaatOR.ClientMyaccount_thirdnameError))
 			{
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_thirdnameError),testdatamap.get("Expected2").toString());
-				test.log(Status.PASS,"#FUNC-Verify Update Client Profile Third Name text field Error Message" + driver.getTitle() +" * Update Client Profile third Name text field Error Message is Pass  * " );
+				test.log(Status.PASS,"Verify Update Client Profile Third Name text field Error Message" + driver.getTitle() +" * Update Client Profile third Name text field Error Message is Pass  * " );
 			   this.takeScreenShot();
 			}
 			else if(CheckElementExists(EdaatOR.ClientMyaccount_lastnameError))
 			{
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_lastnameError),testdatamap.get("Expected2").toString());
-				test.log(Status.PASS,"#FUNC-Verify Update Client Profile last Name text field Error Message" + driver.getTitle() +" * Update Client Profile last Name text field Error Message is Pass * " );
+				test.log(Status.PASS,"Verify Update Client Profile last Name text field Error Message" + driver.getTitle() +" * Update Client Profile last Name text field Error Message is Pass * " );
 			   this.takeScreenShot();
 			}
 			else if(CheckElementExists(EdaatOR.ClientMyaccount_DateofbirthError)&&CheckElementExists(EdaatOR.ClientMyaccount_DateofbirthHijiriError))
 			{
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_DateofbirthError),testdatamap.get("Expected1").toString());
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_DateofbirthHijiriError),testdatamap.get("Expected1").toString());
-		       test.log(Status.PASS,"#FUNC-Verify Update Client Profile date of birth and date of birth hijiri text field Error Message" + driver.getTitle() +" * Update Client Profile date of birth and date of birth hijiri text field Error Message is Pass * " );
+		       test.log(Status.PASS,"Verify Update Client Profile date of birth and date of birth hijiri text field Error Message" + driver.getTitle() +" * Update Client Profile date of birth and date of birth hijiri text field Error Message is Pass * " );
 			   this.takeScreenShot();
 			}
 			else if(CheckElementExists(EdaatOR.ClientMyaccount_MobilenumError))
 			{
 		       VerifyValue1(getText(EdaatOR.ClientMyaccount_MobilenumError),testdatamap.get("Expected1").toString());
-				test.log(Status.PASS,"#FUNC-Verify Update Client Profile Mobile number text field Error Message" + driver.getTitle() +" * Update Client Profile Mobile Number text field Error Message is Pass* " );
+				test.log(Status.PASS,"Verify Update Client Profile Mobile number text field Error Message" + driver.getTitle() +" * Update Client Profile Mobile Number text field Error Message is Pass* " );
 			   this.takeScreenShot();
 			}
 		}
@@ -365,7 +365,7 @@ public class ClientMyAccountPage extends BasePage {
 	 catch(Exception e)
 		{
 			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Verify Update Client Profile text fields" + driver.getTitle() +" * Update Client Profile text fields are Fail * " );
+			test.log(Status.FATAL,"Verify Update Client Profile text fields" + driver.getTitle() +" * Update Client Profile text fields are Fail * " );
 		}
 	}		
 }

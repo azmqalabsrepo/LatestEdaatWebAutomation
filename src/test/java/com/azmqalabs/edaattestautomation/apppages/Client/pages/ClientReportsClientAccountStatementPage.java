@@ -54,13 +54,13 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 			switchToWindow();
 			waitForPageToLoad();
 			this.takeScreenShot();
-			test.log(Status.PASS,"#FUNC-Navigate to Client Account Statement" + driver.getTitle() +" * Navigate to Client Account Statement is Pass * " );
+			test.log(Status.PASS,"Navigate to Client Account Statement" + driver.getTitle() +" * Navigate to Client Account Statement is Pass * " );
         	Log.ReportEvent("PASS", "Verify Navigate to Client Account Statement Page is successfull");
 	
 		}
 		catch(Exception e){
 			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Navigate to Client Account Statement" + driver.getTitle() +" *Navigate to Client Account Statement is FAIL * " );		
+			test.log(Status.FATAL,"Navigate to Client Account Statement" + driver.getTitle() +" *Navigate to Client Account Statement is FAIL * " );
 		}
 	 
 	}
@@ -95,13 +95,13 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
         	this.takeScreenShot();
 			switchBacktoParentwindow();
 		    this.takeScreenShot();
-		    test.log(Status.PASS,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" * Exported report for the selected Biller is Pass * " );
+		    test.log(Status.PASS,"Exported report for the selected Biller" + driver.getTitle() +" * Exported report for the selected Biller is Pass * " );
         	Log.ReportEvent("PASS", " Verify the exported report for the selected Biller is successfull");
 
 	}
 	catch(Exception e){
 		this.takeScreenShot();
-		test.log(Status.FATAL,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" *Exported report for the selected Biller is FAIL * " );		
+		test.log(Status.FATAL,"Exported report for the selected Biller" + driver.getTitle() +" *Exported report for the selected Biller is FAIL * " );
 	}
 			
 }
@@ -137,13 +137,13 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 	        	this.takeScreenShot();
 				switchBacktoParentwindow();
 			    this.takeScreenShot();
-			    test.log(Status.PASS,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" * Exported report for the selected Biller is Pass * " );
+			    test.log(Status.PASS,"Exported report for the selected Biller" + driver.getTitle() +" * Exported report for the selected Biller is Pass * " );
 	        	Log.ReportEvent("PASS", " Verify Account Statement Search is Sucessful");
 	
 		}
 		catch(Exception e){
 			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" *Exported report for the selected Biller is FAIL * " );		
+			test.log(Status.FATAL,"Exported report for the selected Biller" + driver.getTitle() +" *Exported report for the selected Biller is FAIL * " );
 		}
 				
 	}
@@ -185,7 +185,7 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 		        	verifyElementIsPresent(EdaatOR.Client_ClientAccountStatement_FromerrorMsg);
 		        	verifyElementIsPresent(EdaatOR.Client_ClientAccountStatement_ToerrorMsg);	        	
 		        	this.takeScreenShot();			
-				    test.log(Status.PASS,"#FUNC-Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports From and To date error Msg is pass * " );
+				    test.log(Status.PASS,"Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports From and To date error Msg is pass * " );
 		        	Log.ReportEvent("PASS", " Verify Account Statement Search is Sucessful");
 
 				    }
@@ -198,7 +198,7 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 		        	WebClick(EdaatOR.Client_ClientAccountStatement_SearchBtn);		        	
 		        	verifyElementIsPresent(EdaatOR.Client_ClientAccountStatement_ToerrorMsg);	       	
 		        	this.takeScreenShot();			
-				    test.log(Status.PASS,"#FUNC-Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports From date error Msg is pass * " );
+				    test.log(Status.PASS,"Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports From date error Msg is pass * " );
 				}
 				    if(Error.equalsIgnoreCase("Fromdate"))
 				    {
@@ -209,7 +209,7 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 		        	WebClick(EdaatOR.Client_ClientAccountStatement_SearchBtn);		        	
 		        	verifyElementIsPresent(EdaatOR.Client_ClientAccountStatement_FromerrorMsg);       	
 		        	this.takeScreenShot();			
-				    test.log(Status.PASS,"#FUNC-Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports From date error Msg is pass * " );
+				    test.log(Status.PASS,"Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports From date error Msg is pass * " );
 				}
 				    if(Error.equalsIgnoreCase("BillerName"))
 				    {
@@ -222,12 +222,12 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 		        	WebClick(EdaatOR.Client_ClientAccountStatement_SearchBtn);		        	
 		        	verifyElementIsPresent(EdaatOR.Client_ClientAccountStatement_BillernameerrorMsg);       	
 		        	this.takeScreenShot();			
-				    test.log(Status.PASS,"#FUNC-Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports Biller Name error Msg is pass * " );
+				    test.log(Status.PASS,"Client Account Statement Reports error Msg is pass" + driver.getTitle() +" * Client Account Statement Reports Biller Name error Msg is pass * " );
 				}
 			}
 			catch(Exception e){
 				this.takeScreenShot();
-				test.log(Status.FATAL,"#FUNC-Client Account Statement Reports error Msg is Fail" + driver.getTitle() +" *Client Account Statement Reports Biller Name error Msg is FAIL * " );		
+				test.log(Status.FATAL,"Client Account Statement Reports error Msg is Fail" + driver.getTitle() +" *Client Account Statement Reports Biller Name error Msg is FAIL * " );
 			}
 					
 		}
