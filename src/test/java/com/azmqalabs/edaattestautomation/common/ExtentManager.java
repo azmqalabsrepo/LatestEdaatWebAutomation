@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.azmqalabs.edaattestautomation.apppages.GlobalConstant;
 
@@ -49,7 +48,8 @@ public class ExtentManager {
 
         filePath = app1.toString() + "//" + Config.Get("TESTCYCLE.NAME")+"_"+today+"_"+time.toString().replace(".", "").replace(":", "-")+".html";
         System.out.println(filePath);
-		//
+		
+//
 		htmlReporter = new ExtentHtmlReporter(filePath.toString());
 		htmlReporter.loadXMLConfig(app.toString());
 		return htmlReporter;

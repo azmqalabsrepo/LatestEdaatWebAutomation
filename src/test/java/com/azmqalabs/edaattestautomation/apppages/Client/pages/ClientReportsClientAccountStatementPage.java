@@ -12,25 +12,21 @@
 **/
 package com.azmqalabs.edaattestautomation.apppages.Client.pages;
 
-import java.util.Map;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.server.handler.SwitchToFrame;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.azmqalabs.edaattestautomation.apppages.masterpages.BasePage;
 import com.azmqalabs.edaattestautomation.common.Log;
 import com.azmqalabs.edaattestautomation.common.uielement.fieldDecorator;
 import com.azmqalabs.edaattestautomation.objectrepository.EdaatOR;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.Map;
 
 public class ClientReportsClientAccountStatementPage extends BasePage {
-	public ClientReportsClientAccountStatementPage(WebDriver driver,ExtentTest test)
+	public ClientReportsClientAccountStatementPage(WebDriver driver, ExtentTest test)
 	{
 		this.driver=driver;
 		this.test=test;
@@ -73,42 +69,42 @@ public class ClientReportsClientAccountStatementPage extends BasePage {
 	//Parameter Summary  : BillerName,Invoice Contract,FromYear,FromMonth,FromDate,ToYear,ToMonth,ToDate,ClientName
 	public void VerifyAccountstatement(Map<Object, Object> testdatamap,Log Log) {
 		try {
-			    selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_BillerName, "BillerName");
-			    Thread.sleep(1000);
-			    WebEdit(EdaatOR.Client_ClientAccountStatement_InvoiceContactfield, testdatamap.get("Invoice Contract").toString());
-		        WebClick(EdaatOR.Biller_Dashboard_FromDate);
-		        Thread.sleep(1000);
-		    	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_Fromyear,testdatamap.get("FromYear").toString());
-		    	Thread.sleep(1000);
-		    	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_FromMonth,testdatamap.get("FromMonth").toString());
-		    	Thread.sleep(1000);
-	        	WebClick("//a[text()='"+testdatamap.get("FromDate").toString()+"']");
-		    	Thread.sleep(1000);
-	        	WebClick(EdaatOR.Client_ClientAccountStatement_TODate);
-	        	Thread.sleep(1000);
-	        	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_Toyear,testdatamap.get("ToYear").toString());
-	        	Thread.sleep(1000);
-	        	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_ToMonth,testdatamap.get("ToMonth").toString());
-	        	Thread.sleep(1000);
-	        	WebClick("//a[text()='"+testdatamap.get("ToDate").toString()+"']");
-	        	WebClick(EdaatOR.Client_ClientAccountStatement_SearchBtn);
-	        	switchToWindow();
-	        	swithchToFrame(EdaatOR.Client_reportFrame);
-	        	VerifyValue1(WebGetText(EdaatOR.Client_ClientAccountStatement_Reportclientname),testdatamap.get("ClientName").toString());
-	        	Thread.sleep(2000);
-	        	this.takeScreenShot();
-				switchBacktoParentwindow();
-			    this.takeScreenShot();
-			    test.log(Status.PASS,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" * Exported report for the selected Biller is Pass * " );
-	        	Log.ReportEvent("PASS", " Verify the exported report for the selected Biller is successfull");
-	
-		}
-		catch(Exception e){
-			this.takeScreenShot();
-			test.log(Status.FATAL,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" *Exported report for the selected Biller is FAIL * " );		
-		}
-				
+		    selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_BillerName, testdatamap.get("BillerName").toString());
+		    Thread.sleep(1000);
+		    WebEdit(EdaatOR.Client_ClientAccountStatement_InvoiceContactfield, testdatamap.get("Invoice Contract").toString());
+	        WebClick(EdaatOR.Biller_Dashboard_FromDate);
+	        Thread.sleep(1000);
+	    	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_Fromyear,testdatamap.get("FromYear").toString());
+	    	Thread.sleep(1000);
+	    	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_FromMonth,testdatamap.get("FromMonth").toString());
+	    	Thread.sleep(1000);
+        	WebClick("//a[text()='"+testdatamap.get("FromDate").toString()+"']");
+	    	Thread.sleep(1000);
+        	WebClick(EdaatOR.Client_ClientAccountStatement_TODate);
+        	Thread.sleep(1000);
+        	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_Toyear,testdatamap.get("ToYear").toString());
+        	Thread.sleep(1000);
+        	selectDropdownValue_PartialText(EdaatOR.Client_ClientAccountStatement_ToMonth,testdatamap.get("ToMonth").toString());
+        	Thread.sleep(1000);
+        	WebClick("//a[text()='"+testdatamap.get("ToDate").toString()+"']");
+        	WebClick(EdaatOR.Client_ClientAccountStatement_SearchBtn);
+        	switchToWindow();
+        	swithchToFrame(EdaatOR.Client_reportFrame);
+        	VerifyValue1(WebGetText(EdaatOR.Client_ClientAccountStatement_Reportclientname),testdatamap.get("ClientName").toString());
+        	Thread.sleep(2000);
+        	this.takeScreenShot();
+			switchBacktoParentwindow();
+		    this.takeScreenShot();
+		    test.log(Status.PASS,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" * Exported report for the selected Biller is Pass * " );
+        	Log.ReportEvent("PASS", " Verify the exported report for the selected Biller is successfull");
+
 	}
+	catch(Exception e){
+		this.takeScreenShot();
+		test.log(Status.FATAL,"#FUNC-Exported report for the selected Biller" + driver.getTitle() +" *Exported report for the selected Biller is FAIL * " );		
+	}
+			
+}
 	//Function Summary   : Method to Verify  Client Account Statement  Report.
 	//Parameter Summary  : BillerName,Invoice Contract,FromYear,FromMonth,FromDate,ToYear,ToMonth,ToDate,ClientName
 		public void VerifySerachFunctionality(Map<Object, Object> testdatamap,Log Log) {
